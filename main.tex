@@ -1,14 +1,88 @@
-\documentclass{article}
-\usepackage{graphicx}
+\documentclass[12pt,a4paper,oneside]{report}
 
-\title{PFA2}
-\author{Tounsi Selma}
-\date{March 2026}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{caption}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{enumitem}
+
+\geometry{top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm}
+
+% Texte
+\fontsize{12}{14}\selectfont
+\setstretch{1.2}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.4em}
+
+% Chapitre : "Chapitre 2. Titre" sur la même ligne
+\titleformat{\chapter}[hang]
+  {\bfseries\fontsize{14}{16}\selectfont}
+  {Chapitre \thechapter.}
+  {0.5em}
+  {}
+
+% Sections : 1. Titre ; 2. Titre ...
+\renewcommand{\thesection}{\arabic{section}}
+\titleformat{\section}
+  {\bfseries\fontsize{14}{16}\selectfont}
+  {\thesection.}
+  {0.5em}
+  {}
+
+% Sous-sections : 3.1. ...
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\titleformat{\subsection}
+  {\bfseries\fontsize{12}{14}\selectfont}
+  {\thesubsection.}
+  {0.5em}
+  {}
+
+% Sous-sous-sections : 3.1.1. ...
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+\titleformat{\subsubsection}
+  {\bfseries\fontsize{12}{14}\selectfont}
+  {\thesubsubsection.}
+  {0.5em}
+  {}
+
+% Espacement des titres
+\titlespacing*{\chapter}{0pt}{0pt}{18pt}
+\titlespacing*{\section}{0pt}{12pt}{8pt}
+\titlespacing*{\subsection}{0pt}{10pt}{6pt}
+\titlespacing*{\subsubsection}{0pt}{8pt}{4pt}
+
+% Légendes en dessous
+\captionsetup[figure]{position=bottom,labelfont=bf,font=small,labelsep=colon}
+\captionsetup[table]{position=bottom,labelfont=bf,font=small,labelsep=colon}
+
+% Listes
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
 
 \begin{document}
 
-\maketitle
+\begin{titlepage}
+    \centering
+    \vspace*{3cm}
+    {\fontsize{18}{22}\selectfont \textbf{PFA2}\par}
+    \vspace{1.5cm}
+    {\fontsize{14}{16}\selectfont Rapport de Projet de Fin d’Année\par}
+    \vspace{2cm}
+    {\fontsize{14}{16}\selectfont Tounsi Selma\par}
+    \vfill
+    {\fontsize{12}{14}\selectfont Mars 2026\par}
+\end{titlepage}
+
 \tableofcontents
+\clearpage
 
 \input{chapitre1}
 \input{chapitre2}
