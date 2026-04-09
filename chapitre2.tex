@@ -1,11 +1,12 @@
 \chapter{Analyse et spécification des besoins}
 
 \section*{Introduction}
-Après avoir présenté le cadre général du projet dans le premier chapitre, nous abordons maintenant l’analyse du système à développer ainsi que la spécification de ses besoins fonctionnels et non fonctionnels.
+Après avoir présenté le cadre général du projet dans le premier chapitre, nous abordons maintenant l'analyse du système à développer ainsi que la spécification de ses besoins fonctionnels et non fonctionnels.
 
 \section{Description du système à développer}
 
-Le système proposé vise à développer une application de pépinière intelligente permettant de centraliser la gestion des plantes et de leurs informations, d’offrir une plateforme e-commerce pour la consultation et l’achat des plantes, et d’assister les utilisateurs dans le diagnostic de l’état de santé des plantes à partir d’images de leurs plantes. L’application permet également aux gestionnaires de pépinières d’administrer le catalogue de plantes et de suivre les commandes.
+Le système proposé vise à développer une application de pé
+pinière intelligente permettant de centraliser la gestion des plantes et de leurs informations, d'offrir une plateforme E-commerce pour la consultation et l'achat des plantes, et d'assister les utilisateurs dans le diagnostic de l'état de santé des plantes à partir d'images de leurs plantes. L'application permet également aux gestionnaires de pépinières d'administrer le catalogue de plantes et de suivre les commandes.
 
 \section{Identification des acteurs}
 
@@ -20,7 +21,7 @@ Le tableau suivant présente les différents acteurs de notre système.
 \hline
 Vendeur & Primaire &
 \begin{itemize}
-    \item S’authentifier
+    \item S'authentifier
     \item Gérer plantes
     \item Consulter plantes
     \item Valider commandes
@@ -34,7 +35,7 @@ Administrateur & Primaire &
 \hline
 Client & Primaire &
 \begin{itemize}
-    \item S’authentifier
+    \item S'authentifier
     \item Consulter les plantes disponibles à la vente
     \item Ajouter une plante au panier
     \item Passer une commande
@@ -42,7 +43,7 @@ Client & Primaire &
     \item Effectuer diagnostic
 \end{itemize} \\
 \hline
-Module d’assistance au diagnostic & Secondaire &
+Module d'assistance au diagnostic & Secondaire &
 \begin{itemize}
     \item Générer les diagnostics
     \item Générer les recommandations
@@ -63,7 +64,7 @@ Le système doit permettre au client de :
     \item ajouter une plante au panier ;
     \item valider le panier et passer une commande ;
     \item suivre ses commandes ;
-    \item effectuer un diagnostic de l’état de santé d’une plante à partir d’une image fournie.
+    \item effectuer un diagnostic de l'état de santé d'une plante à partir d'une image fournie.
 \end{itemize}
 
 \subsection*{Vendeur}
@@ -75,71 +76,71 @@ Le système doit permettre au vendeur de :
 \end{itemize}
 
 \subsection*{Administrateur}
-L’administrateur dispose de l’ensemble des fonctionnalités du vendeur, en plus de la gestion des utilisateurs (clients et vendeurs).
+L'administrateur dispose de l'ensemble des fonctionnalités du vendeur, en plus de la gestion des utilisateurs (clients et vendeurs).
 
-Toutes ces fonctionnalités ne peuvent être réalisées qu’après une authentification.
+Toutes ces fonctionnalités ne peuvent être réalisées qu'après une authentification.
 
-\subsection*{Module d’assistance au diagnostic}
+\subsection*{Module d'assistance au diagnostic}
 \begin{itemize}
-    \item Le système doit intégrer un module d’intelligence artificielle chargé de l’analyse des images des plantes.
+    \item Le système doit intégrer un module d'intelligence artificielle chargé de l'analyse des images des plantes.
     \item Le module IA doit traiter les images envoyées par les clients et retourner un résultat de diagnostic.
 \end{itemize}
 
 \section{Besoins non fonctionnels}
 
-Les exigences non fonctionnelles visent à garantir la qualité, la fiabilité et l’efficacité de la plateforme de pépinière en ligne, tant sur le plan technique que sur l’expérience utilisateur.
+Les exigences non fonctionnelles visent à garantir la qualité, la fiabilité et l'efficacité de la plateforme de pépinière en ligne, tant sur le plan technique que sur l'expérience utilisateur.
 
 \subsection*{Ergonomie}
 \begin{itemize}
-    \item L’interface de la plateforme doit être intuitive et facile à utiliser, permettant aux utilisateurs de naviguer aisément entre le catalogue, le panier et le module de diagnostic.
-    \item Un design clair et structuré doit faciliter la consultation des plantes et l’accès aux fonctionnalités principales.
+    \item L'interface de la plateforme doit être intuitive et facile à utiliser, permettant aux utilisateurs de naviguer aisément entre le catalogue, le panier et le module de diagnostic.
+    \item Un design clair et structuré doit faciliter la consultation des plantes et l'accès aux fonctionnalités principales.
 \end{itemize}
 
 \subsection*{Performance}
 \begin{itemize}
-    \item La plateforme doit être capable de gérer simultanément un nombre important d’utilisateurs, de consultations du catalogue et de commandes.
+    \item La plateforme doit être capable de gérer simultanément un nombre important d'utilisateurs, de consultations du catalogue et de commandes.
     \item Le système de diagnostic intelligent doit fournir des résultats dans des délais acceptables afin de garantir une expérience utilisateur fluide.
 \end{itemize}
 
 \subsection*{Sécurité}
 \begin{itemize}
     \item Les données personnelles des utilisateurs (nom, e-mail, informations de compte) doivent être protégées conformément aux normes de sécurité.
-    \item Un mécanisme de validation des comptes utilisateurs (vérification de l’e-mail) doit être mis en place afin de limiter les accès frauduleux.
+    \item Un mécanisme de validation des comptes utilisateurs (vérification de l'e-mail) doit être mis en place afin de limiter les accès frauduleux.
 \end{itemize}
 
 \subsection*{Fiabilité et disponibilité}
 \begin{itemize}
-    \item La plateforme doit être disponible de manière continue, avec un minimum d’interruptions.
+    \item La plateforme doit être disponible de manière continue, avec un minimum d'interruptions.
 \end{itemize}
 
 \subsection*{Évolutivité}
 \begin{itemize}
-    \item L’architecture de la plateforme doit permettre l’intégration future de nouvelles fonctionnalités, notamment l’amélioration du système intelligent de diagnostic et de recommandation.
+    \item L'architecture de la plateforme doit permettre l'intégration future de nouvelles fonctionnalités, notamment l'amélioration du système intelligent de diagnostic et de recommandation.
 \end{itemize}
 
-\section{Diagramme de cas d’utilisation global}
+\section{Diagramme de cas d'utilisation global}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.85\textwidth]{images/diag cas d'utilisation global.png}
-    \caption{Diagramme de cas d’utilisation global}
+    \caption{Diagramme de cas d'utilisation global}
 \end{figure}
 
-\section{Raffinement des cas d’utilisation}
+\section{Raffinement des cas d'utilisation}
 
-\subsection{Cas d’utilisation << Gérer plante >>}
+\subsection{Cas d'utilisation << Gérer plante >>}
 
-Ce cas d’utilisation permet au vendeur ou à l’administrateur de modifier le stock, modifier, supprimer et ajouter une plante.
+Ce cas d'utilisation permet au vendeur ou à l'administrateur de modifier le stock, modifier, supprimer et ajouter une plante.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\textwidth]{images/gérer plante.png}
-    \caption{Raffinement du cas d’utilisation « Gérer plante »}
+    \caption{Raffinement du cas d'utilisation « Gérer plante »}
 \end{figure}
 
-\subsubsection{Cas d’utilisation << Modifier le stock >>}
+\subsubsection{Cas d'utilisation << Modifier le stock >>}
 
-Le tableau présente la description textuelle du cas d’utilisation « Modifier le stock ».
+Le tableau présente la description textuelle du cas d'utilisation « Modifier le stock ».
 
 \begin{table}[H]
 \centering
@@ -150,7 +151,7 @@ Le tableau présente la description textuelle du cas d’utilisation « Modifier
 \hline
 \textbf{Acteur} & Vendeur, Administrateur \\
 \hline
-\textbf{Résumé} & Cas d’utilisation permettant à un vendeur ou à un administrateur de modifier le stock. \\
+\textbf{Résumé} & Cas d'utilisation permettant à un vendeur ou à un administrateur de modifier le stock. \\
 \hline
 \textbf{Préconditions} &
 \begin{itemize}
@@ -166,30 +167,30 @@ Le tableau présente la description textuelle du cas d’utilisation « Modifier
 \hline
 \textbf{Scénario nominal} &
 \begin{enumerate}
-    \item Le vendeur/administrateur accède à l’interface de gestion des plantes.
+    \item Le vendeur/administrateur accède à l'interface de gestion des plantes.
     \item Le système affiche la liste des plantes.
-    \item L’acteur sélectionne le produit à modifier.
+    \item L'acteur sélectionne le produit à modifier.
     \item Le système affiche les détails de la plante, y compris la quantité en stock actuelle.
-    \item L’acteur saisit la nouvelle quantité en stock.
-    \item L’acteur valide la modification.
+    \item L'acteur saisit la nouvelle quantité en stock.
+    \item L'acteur valide la modification.
     \item Le système vérifie la validité des données saisies.
     \item Le système met à jour la quantité en stock dans la base de données et affiche un message de confirmation.
 \end{enumerate} \\
 \hline
-\textbf{Enchaînements d’erreurs} &
+\textbf{Enchaînements d'erreurs} &
 \textbf{E1 : Quantité invalide}
 \begin{itemize}
-    \item À l’étape 5 du scénario nominal, l’acteur saisit une valeur négative ou non numérique.
-    \item Le système affiche un message d’erreur et le cas d’utilisation est terminé.
+    \item À l'étape 5 du scénario nominal, l'acteur saisit une valeur négative ou non numérique.
+    \item Le système affiche un message d'erreur et le cas d'utilisation est terminé.
 \end{itemize} \\
 \hline
 \end{tabular}
-\caption{Cas d’utilisation « Modifier le stock »}
+\caption{Cas d'utilisation « Modifier le stock »}
 \end{table}
 
-\subsubsection{Cas d’utilisation << Modifier plante >>}
+\subsubsection{Cas d'utilisation << Modifier plante >>}
 
-Le tableau présente la description textuelle du cas d’utilisation « Modifier plante ».
+Le tableau présente la description textuelle du cas d'utilisation « Modifier plante ».
 
 \begin{table}[H]
 \centering
@@ -200,7 +201,7 @@ Le tableau présente la description textuelle du cas d’utilisation « Modifier
 \hline
 \textbf{Acteur} & Vendeur, Administrateur \\
 \hline
-\textbf{Résumé} & Cas d’utilisation permettant à un vendeur ou à un administrateur de modifier une plante. \\
+\textbf{Résumé} & Cas d'utilisation permettant à un vendeur ou à un administrateur de modifier une plante. \\
 \hline
 \textbf{Préconditions} &
 \begin{itemize}
@@ -215,22 +216,22 @@ Le tableau présente la description textuelle du cas d’utilisation « Modifier
 \hline
 \textbf{Scénario nominal} &
 \begin{enumerate}
-    \item L’acteur accède à l’interface de gestion des plantes.
+    \item L'acteur accède à l'interface de gestion des plantes.
     \item Le système affiche la liste des plantes.
-    \item L’acteur sélectionne la plante à modifier.
+    \item L'acteur sélectionne la plante à modifier.
     \item Le système affiche les informations actuelles de la plante.
-    \item L’acteur modifie les champs souhaités et valide les modifications.
+    \item L'acteur modifie les champs souhaités et valide les modifications.
     \item Le système vérifie la validité des données saisies et enregistre les modifications.
     \item Le système affiche un message de confirmation.
 \end{enumerate} \\
 \hline
 \end{tabular}
-\caption{Cas d’utilisation « Modifier plante »}
+\caption{Cas d'utilisation « Modifier plante »}
 \end{table}
 
-\subsubsection{Cas d’utilisation << Ajouter plante >>}
+\subsubsection{Cas d'utilisation << Ajouter plante >>}
 
-Le tableau présente la description textuelle du cas d’utilisation « Ajouter plante ».
+Le tableau présente la description textuelle du cas d'utilisation « Ajouter plante ».
 
 \begin{table}[H]
 \centering
@@ -241,7 +242,7 @@ Le tableau présente la description textuelle du cas d’utilisation « Ajouter 
 \hline
 \textbf{Acteur} & Vendeur, Administrateur \\
 \hline
-\textbf{Résumé} & Cas d’utilisation permettant à un vendeur ou à un administrateur d’ajouter une plante. \\
+\textbf{Résumé} & Cas d'utilisation permettant à un vendeur ou à un administrateur d'ajouter une plante. \\
 \hline
 \textbf{Préconditions} &
 \begin{itemize}
@@ -250,32 +251,32 @@ Le tableau présente la description textuelle du cas d’utilisation « Ajouter 
 \hline
 \textbf{Scénario nominal} &
 \begin{enumerate}
-    \item L’acteur accède à l’interface de gestion des plantes et clique sur « Ajouter plante ».
-    \item Le système affiche le formulaire d’ajout.
-    \item L’acteur saisit les informations de la plante et valide le formulaire.
+    \item L'acteur accède à l'interface de gestion des plantes et clique sur « Ajouter plante ».
+    \item Le système affiche le formulaire d'ajout.
+    \item L'acteur saisit les informations de la plante et valide le formulaire.
     \item Le système vérifie la validité des données saisies.
     \item Le système enregistre la plante et affiche un message de confirmation.
 \end{enumerate} \\
 \hline
 \textbf{Enchaînements alternatifs} &
-\textbf{A1 : L’acteur laisse un champ vide}
+\textbf{A1 : L'acteur laisse un champ vide}
 \begin{itemize}
-    \item À l’étape 4, le système affiche une alerte et l’acteur doit reprendre à l’étape 3.
+    \item À l'étape 4, le système affiche une alerte et l'acteur doit reprendre à l'étape 3.
 \end{itemize} \\
 \hline
-\textbf{Scénario d’erreur} &
+\textbf{Scénario d'erreur} &
 \textbf{E1 : Plante déjà existante}
 \begin{itemize}
-    \item À l’étape 4, le système affiche une alerte et l’acteur doit reprendre à l’étape 3.
+    \item À l'étape 4, le système affiche une alerte et l'acteur doit reprendre à l'étape 3.
 \end{itemize} \\
 \hline
 \end{tabular}
-\caption{Cas d’utilisation « Ajouter plante »}
+\caption{Cas d'utilisation « Ajouter plante »}
 \end{table}
 
-\subsubsection{Cas d’utilisation << Supprimer plante >>}
+\subsubsection{Cas d'utilisation << Supprimer plante >>}
 
-Le tableau présente la description textuelle du cas d’utilisation « Supprimer plante ».
+Le tableau présente la description textuelle du cas d'utilisation « Supprimer plante ».
 
 \begin{table}[H]
 \centering
@@ -286,7 +287,7 @@ Le tableau présente la description textuelle du cas d’utilisation « Supprime
 \hline
 \textbf{Acteur} & Vendeur, Administrateur \\
 \hline
-\textbf{Résumé} & Cas d’utilisation permettant à un vendeur ou à un administrateur de supprimer une plante. \\
+\textbf{Résumé} & Cas d'utilisation permettant à un vendeur ou à un administrateur de supprimer une plante. \\
 \hline
 \textbf{Préconditions} &
 \begin{itemize}
@@ -294,30 +295,30 @@ Le tableau présente la description textuelle du cas d’utilisation « Supprime
     \item Plante existe déjà.
 \end{itemize} \\
 \hline
-\textbf{Postconditions} & La plante n’est plus visible sur le site. \\
+\textbf{Postconditions} & La plante n'est plus visible sur le site. \\
 \hline
 \textbf{Scénario nominal} &
 \begin{enumerate}
-    \item L’acteur accède à l’interface de gestion des plantes.
+    \item L'acteur accède à l'interface de gestion des plantes.
     \item Le système affiche la liste des plantes.
-    \item L’acteur sélectionne la plante à supprimer et clique sur supprimer.
+    \item L'acteur sélectionne la plante à supprimer et clique sur supprimer.
     \item Le système demande une confirmation de suppression.
-    \item L’acteur confirme l’opération.
+    \item L'acteur confirme l'opération.
     \item Le système supprime la plante de la base de données et affiche un message de confirmation.
 \end{enumerate} \\
 \hline
 \end{tabular}
-\caption{Cas d’utilisation « Supprimer plante »}
+\caption{Cas d'utilisation « Supprimer plante »}
 \end{table}
 
-\subsection{Cas d’utilisation << Consulter plantes >>}
+\subsection{Cas d'utilisation << Consulter plantes >>}
 
-Ce cas d’utilisation permet au vendeur de consulter la liste des plantes.
+Ce cas d'utilisation permet au vendeur de consulter la liste des plantes.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\textwidth]{images/consulter plantes.png}
-    \caption{Raffinement du cas d’utilisation « Consulter plantes »}
+    \caption{Raffinement du cas d'utilisation « Consulter plantes »}
 \end{figure}
 
 \begin{table}[H]
@@ -329,7 +330,7 @@ Ce cas d’utilisation permet au vendeur de consulter la liste des plantes.
 \hline
 \textbf{Acteur} & Vendeur \\
 \hline
-\textbf{Résumé} & Cas d’utilisation permettant au vendeur d’accéder à la liste des plantes. \\
+\textbf{Résumé} & Cas d'utilisation permettant au vendeur d'accéder à la liste des plantes. \\
 \hline
 \textbf{Préconditions} &
 \begin{itemize}
@@ -348,28 +349,28 @@ Ce cas d’utilisation permet au vendeur de consulter la liste des plantes.
 \textbf{Scénario alternatif} &
 \textbf{A1 : Filtrer les plantes}
 \begin{itemize}
-    \item À l’étape 2, le vendeur choisit de filtrer les plantes selon un des critères suivants (plante d’intérieur, d’extérieur, prix, besoin en lumière, eau, température...).
-    \item Le système reprend à l’étape 2.
+    \item À l'étape 2, le vendeur choisit de filtrer les plantes selon un des critères suivants (plante d'intérieur, d'extérieur, prix, besoin en lumière, eau, température...).
+    \item Le système reprend à l'étape 2.
 \end{itemize}
 
 \textbf{A2 : Rechercher une plante}
 \begin{itemize}
-    \item À l’étape 2, le vendeur choisit de rechercher une plante en tapant un mot clé.
-    \item Le système reprend à l’étape 2.
+    \item À l'étape 2, le vendeur choisit de rechercher une plante en tapant un mot clé.
+    \item Le système reprend à l'étape 2.
 \end{itemize} \\
 \hline
 \end{tabular}
-\caption{Cas d’utilisation « Consulter plantes »}
+\caption{Cas d'utilisation « Consulter plantes »}
 \end{table}
 
-\subsection{Cas d’utilisation << Consulter commandes >>}
+\subsection{Cas d'utilisation << Consulter commandes >>}
 
-Le tableau présente la description textuelle du cas d’utilisation « Consulter commandes ».
+Le tableau présente la description textuelle du cas d'utilisation « Consulter commandes ».
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\textwidth]{images/consulter commandes.png}
-    \caption{Raffinement du cas d’utilisation « Consulter commandes »}
+    \caption{Raffinement du cas d'utilisation « Consulter commandes »}
 \end{figure}
 
 \begin{table}[H]
@@ -381,7 +382,7 @@ Le tableau présente la description textuelle du cas d’utilisation « Consulte
 \hline
 \textbf{Acteur} & Vendeur, Administrateur \\
 \hline
-\textbf{Résumé} & Cas d’utilisation permettant au vendeur ainsi qu’à l’administrateur d’accéder à la liste des commandes. \\
+\textbf{Résumé} & Cas d'utilisation permettant au vendeur ainsi qu'à l'administrateur d'accéder à la liste des commandes. \\
 \hline
 \textbf{Préconditions} &
 \begin{itemize}
@@ -393,40 +394,40 @@ Le tableau présente la description textuelle du cas d’utilisation « Consulte
 \hline
 \textbf{Scénario nominal} &
 \begin{enumerate}
-    \item L’acteur accède à la section « Commandes ».
+    \item L'acteur accède à la section « Commandes ».
     \item Le système affiche la liste des commandes.
 \end{enumerate} \\
 \hline
 \textbf{Scénario alternatif} &
-\textbf{A1 : Recherche d’un compte utilisateur}
+\textbf{A1 : Recherche d'un compte utilisateur}
 \begin{itemize}
-    \item À l’étape 2, l’administrateur choisit de faire une recherche, il saisit un mot-clé (nom, email...).
+    \item À l'étape 2, l'administrateur choisit de faire une recherche, il saisit un mot-clé (nom, email...).
     \item Le système affiche les comptes correspondants.
 \end{itemize}
 
 \textbf{A2 : Filtrage des comptes utilisateurs}
 \begin{itemize}
-    \item À l’étape 2, l’administrateur choisit d’appliquer un filtre selon un des critères suivants (statut actif/désactivé, rôle client/vendeur...).
+    \item À l'étape 2, l'administrateur choisit d'appliquer un filtre selon un des critères suivants (statut actif/désactivé, rôle client/vendeur...).
     \item Le système met à jour la liste affichée.
 \end{itemize} \\
 \hline
 \end{tabular}
-\caption{Cas d’utilisation « Consulter commandes »}
+\caption{Cas d'utilisation « Consulter commandes »}
 \end{table}
 
-\subsection{Cas d’utilisation << Gérer commandes >>}
+\subsection{Cas d'utilisation << Gérer commandes >>}
 
-Ce cas d’utilisation permet au vendeur ainsi qu’à l’administrateur de gérer les commandes passées par les clients.
+Ce cas d'utilisation permet au vendeur ainsi qu'à l'administrateur de gérer les commandes passées par les clients.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\textwidth]{images/gérer commandes.png}
-    \caption{Raffinement du cas d’utilisation « Gérer commandes »}
+    \caption{Raffinement du cas d'utilisation « Gérer commandes »}
 \end{figure}
 
-\subsubsection{Cas d’utilisation << Accepter commande >>}
+\subsubsection{Cas d'utilisation << Accepter commande >>}
 
-Le tableau présente la description textuelle du cas d’utilisation « Accepter commande ».
+Le tableau présente la description textuelle du cas d'utilisation « Accepter commande ».
 
 \begin{table}[H]
 \centering
@@ -437,7 +438,7 @@ Le tableau présente la description textuelle du cas d’utilisation « Accepter
 \hline
 \textbf{Acteur} & Vendeur, Administrateur \\
 \hline
-\textbf{Résumé} & Cas d’utilisation permettant au vendeur ainsi qu’à l’administrateur d’accepter une commande. \\
+\textbf{Résumé} & Cas d'utilisation permettant au vendeur ainsi qu'à l'administrateur d'accepter une commande. \\
 \hline
 \textbf{Préconditions} &
 \begin{itemize}
@@ -449,33 +450,33 @@ Le tableau présente la description textuelle du cas d’utilisation « Accepter
 \hline
 \textbf{Scénario nominal} &
 \begin{enumerate}
-    \item L’acteur sélectionne une commande en attente.
+    \item L'acteur sélectionne une commande en attente.
     \item Le système affiche les détails de la commande.
-    \item L’acteur clique sur « Accepter ».
+    \item L'acteur clique sur « Accepter ».
     \item Le système vérifie la disponibilité du stock.
     \item Le système met à jour le statut de la commande et affiche un message de confirmation.
 \end{enumerate} \\
 \hline
-\textbf{Scénario d’erreur} &
+\textbf{Scénario d'erreur} &
 \textbf{E1 : Validation abandonnée}
 \begin{itemize}
-    \item À l’étape 3, l’acteur décide d’annuler l’opération.
-    \item Le système ne modifie pas la commande et le cas d’utilisation se termine.
+    \item À l'étape 3, l'acteur décide d'annuler l'opération.
+    \item Le système ne modifie pas la commande et le cas d'utilisation se termine.
 \end{itemize}
 
 \textbf{E2 : Stock insuffisant}
 \begin{itemize}
-    \item À l’étape 4, le système détecte que la quantité demandée n’est plus disponible.
-    \item Le système affiche un message d’erreur.
+    \item À l'étape 4, le système détecte que la quantité demandée n'est plus disponible.
+    \item Le système affiche un message d'erreur.
 \end{itemize} \\
 \hline
 \end{tabular}
-\caption{Cas d’utilisation « Accepter commande »}
+\caption{Cas d'utilisation « Accepter commande »}
 \end{table}
 
-\subsubsection{Cas d’utilisation << Refuser commande >>}
+\subsubsection{Cas d'utilisation << Refuser commande >>}
 
-Le tableau présente la description textuelle du cas d’utilisation « Refuser commande ».
+Le tableau présente la description textuelle du cas d'utilisation « Refuser commande ».
 
 \begin{table}[H]
 \centering
@@ -486,7 +487,7 @@ Le tableau présente la description textuelle du cas d’utilisation « Refuser 
 \hline
 \textbf{Acteur} & Vendeur, Administrateur \\
 \hline
-\textbf{Résumé} & Cas d’utilisation permettant au vendeur ainsi qu’à l’administrateur de refuser une commande. \\
+\textbf{Résumé} & Cas d'utilisation permettant au vendeur ainsi qu'à l'administrateur de refuser une commande. \\
 \hline
 \textbf{Préconditions} &
 \begin{itemize}
@@ -498,36 +499,36 @@ Le tableau présente la description textuelle du cas d’utilisation « Refuser 
 \hline
 \textbf{Scénario nominal} &
 \begin{enumerate}
-    \item L’acteur sélectionne une commande en attente.
+    \item L'acteur sélectionne une commande en attente.
     \item Le système affiche les détails de la commande.
-    \item L’acteur clique sur « Refuser ».
+    \item L'acteur clique sur « Refuser ».
     \item Le système met à jour le statut de la commande et affiche un message de confirmation.
 \end{enumerate} \\
 \hline
-\textbf{Scénario d’erreur} &
+\textbf{Scénario d'erreur} &
 \textbf{E1 : Refus abandonné}
 \begin{itemize}
-    \item À l’étape 3, l’acteur décide d’annuler l’opération.
-    \item Le système ne modifie pas la commande et le cas d’utilisation se termine.
+    \item À l'étape 3, l'acteur décide d'annuler l'opération.
+    \item Le système ne modifie pas la commande et le cas d'utilisation se termine.
 \end{itemize} \\
 \hline
 \end{tabular}
-\caption{Cas d’utilisation « Refuser commande »}
+\caption{Cas d'utilisation « Refuser commande »}
 \end{table}
 
-\subsection{Cas d’utilisation << Gérer comptes utilisateurs >>}
+\subsection{Cas d'utilisation << Gérer comptes utilisateurs >>}
 
-Ce cas d’utilisation permet à l’administrateur de gérer les comptes utilisateurs.
+Ce cas d'utilisation permet à l'administrateur de gérer les comptes utilisateurs.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\textwidth]{images/gérer comptes utilisateurs.png}
-    \caption{Raffinement du cas d’utilisation « Gérer comptes utilisateurs »}
+    \caption{Raffinement du cas d'utilisation « Gérer comptes utilisateurs »}
 \end{figure}
 
-\subsubsection{Cas d’utilisation << Activer compte utilisateur >>}
+\subsubsection{Cas d'utilisation << Activer compte utilisateur >>}
 
-Le tableau présente la description textuelle du cas d’utilisation « Activer compte utilisateur ».
+Le tableau présente la description textuelle du cas d'utilisation « Activer compte utilisateur ».
 
 \begin{table}[H]
 \centering
@@ -538,7 +539,7 @@ Le tableau présente la description textuelle du cas d’utilisation « Activer 
 \hline
 \textbf{Acteur} & Administrateur \\
 \hline
-\textbf{Résumé} & Cas d’utilisation permettant à l’administrateur d’activer un compte utilisateur afin de lui permettre d’accéder aux fonctionnalités de la plateforme. \\
+\textbf{Résumé} & Cas d'utilisation permettant à l'administrateur d'activer un compte utilisateur afin de lui permettre d'accéder aux fonctionnalités de la plateforme. \\
 \hline
 \textbf{Préconditions} &
 \begin{itemize}
@@ -550,19 +551,19 @@ Le tableau présente la description textuelle du cas d’utilisation « Activer 
 \hline
 \textbf{Scénario nominal} &
 \begin{enumerate}
-    \item L’administrateur sélectionne un compte dont le statut est « En attente ».
+    \item L'administrateur sélectionne un compte dont le statut est « En attente ».
     \item Le système affiche les détails du compte.
-    \item L’administrateur clique sur « Activer ».
+    \item L'administrateur clique sur « Activer ».
     \item Le système met à jour le statut du compte et affiche un message de succès.
 \end{enumerate} \\
 \hline
 \end{tabular}
-\caption{Cas d’utilisation « Activer compte utilisateur »}
+\caption{Cas d'utilisation « Activer compte utilisateur »}
 \end{table}
 
-\subsubsection{Cas d’utilisation << Désactiver compte utilisateur >>}
+\subsubsection{Cas d'utilisation << Désactiver compte utilisateur >>}
 
-Le tableau présente la description textuelle du cas d’utilisation « Désactiver compte utilisateur ».
+Le tableau présente la description textuelle du cas d'utilisation « Désactiver compte utilisateur ».
 
 \begin{table}[H]
 \centering
@@ -573,7 +574,7 @@ Le tableau présente la description textuelle du cas d’utilisation « Désacti
 \hline
 \textbf{Acteur} & Administrateur \\
 \hline
-\textbf{Résumé} & Cas d’utilisation permettant à l’administrateur de suspendre temporairement un compte utilisateur. \\
+\textbf{Résumé} & Cas d'utilisation permettant à l'administrateur de suspendre temporairement un compte utilisateur. \\
 \hline
 \textbf{Préconditions} &
 \begin{itemize}
@@ -585,24 +586,24 @@ Le tableau présente la description textuelle du cas d’utilisation « Désacti
 \hline
 \textbf{Scénario nominal} &
 \begin{enumerate}
-    \item L’administrateur sélectionne un compte actif.
+    \item L'administrateur sélectionne un compte actif.
     \item Le système affiche les détails du compte.
-    \item L’administrateur clique sur « Désactiver ».
+    \item L'administrateur clique sur « Désactiver ».
     \item Le système met à jour le statut du compte et affiche un message de succès.
 \end{enumerate} \\
 \hline
 \end{tabular}
-\caption{Cas d’utilisation « Désactiver compte utilisateur »}
+\caption{Cas d'utilisation « Désactiver compte utilisateur »}
 \end{table}
 
-\subsection{Cas d’utilisation << Consulter comptes utilisateurs >>}
+\subsection{Cas d'utilisation << Consulter comptes utilisateurs >>}
 
-Le tableau présente la description textuelle du cas d’utilisation « Consulter comptes utilisateurs ».
+Le tableau présente la description textuelle du cas d'utilisation « Consulter comptes utilisateurs ».
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\textwidth]{images/consulter comptes utilisateurs.png}
-    \caption{Raffinement du cas d’utilisation « Consulter comptes utilisateurs »}
+    \caption{Raffinement du cas d'utilisation « Consulter comptes utilisateurs »}
 \end{figure}
 
 \begin{table}[H]
@@ -614,7 +615,7 @@ Le tableau présente la description textuelle du cas d’utilisation « Consulte
 \hline
 \textbf{Acteur} & Administrateur \\
 \hline
-\textbf{Résumé} & Cas d’utilisation permettant à l’administrateur d’accéder à la liste des comptes utilisateurs. \\
+\textbf{Résumé} & Cas d'utilisation permettant à l'administrateur d'accéder à la liste des comptes utilisateurs. \\
 \hline
 \textbf{Préconditions} &
 \begin{itemize}
@@ -626,28 +627,28 @@ Le tableau présente la description textuelle du cas d’utilisation « Consulte
 \hline
 \textbf{Scénario nominal} &
 \begin{enumerate}
-    \item L’administrateur accède à la section « Comptes utilisateurs ».
+    \item L'administrateur accède à la section « Comptes utilisateurs ».
     \item Le système affiche la liste des comptes avec leurs informations principales et leur statut.
 \end{enumerate} \\
 \hline
 \textbf{Scénario alternatif} &
-\textbf{A1 : Recherche d’un compte utilisateur}
+\textbf{A1 : Recherche d'un compte utilisateur}
 \begin{itemize}
-    \item À l’étape 2, l’administrateur saisit un mot-clé (nom, email...).
+    \item À l'étape 2, l'administrateur saisit un mot-clé (nom, email...).
     \item Le système affiche les comptes correspondants.
 \end{itemize}
 
 \textbf{A2 : Filtrage des comptes utilisateurs}
 \begin{itemize}
-    \item À l’étape 2, l’administrateur applique un filtre (statut actif/désactivé, rôle client/vendeur...).
+    \item À l'étape 2, l'administrateur applique un filtre (statut actif/désactivé, rôle client/vendeur...).
     \item Le système met à jour la liste affichée.
 \end{itemize} \\
 \hline
 \end{tabular}
-\caption{Cas d’utilisation « Consulter comptes utilisateurs »}
+\caption{Cas d'utilisation « Consulter comptes utilisateurs »}
 \end{table}
 
-\subsection{Cas d’utilisation << Ajouter une plante au panier >>}
+\subsection{Cas d'utilisation << Ajouter une plante au panier >>}
 
 \begin{table}[H]
 \centering
@@ -658,7 +659,7 @@ Le tableau présente la description textuelle du cas d’utilisation « Consulte
 \hline
 \textbf{Acteur} & Client \\
 \hline
-\textbf{Résumé} & Cas d’utilisation permettant au client d’ajouter une plante sélectionnée à son panier afin de préparer une commande. \\
+\textbf{Résumé} & Cas d'utilisation permettant au client d'ajouter une plante sélectionnée à son panier afin de préparer une commande. \\
 \hline
 \textbf{Préconditions} &
 \begin{itemize}
@@ -680,17 +681,17 @@ Le tableau présente la description textuelle du cas d’utilisation « Consulte
 \textbf{Scénario alternatif} &
 \textbf{A1 : Modification de la quantité}
 \begin{itemize}
-    \item À l’étape 3, le client modifie la quantité avant la confirmation.
+    \item À l'étape 3, le client modifie la quantité avant la confirmation.
     \item Le système prend en compte la nouvelle quantité.
 \end{itemize} \\
 \hline
 \end{tabular}
-\caption{Cas d’utilisation « Ajouter une plante au panier »}
+\caption{Cas d'utilisation « Ajouter une plante au panier »}
 \end{table}
 
-\subsection{Cas d’utilisation << Passer une commande >>}
+\subsection{Cas d'utilisation << Passer une commande >>}
 
-Le tableau présente la description textuelle du cas d’utilisation « Passer une commande ».
+Le tableau présente la description textuelle du cas d'utilisation « Passer une commande ».
 
 \begin{table}[H]
 \centering
@@ -701,7 +702,7 @@ Le tableau présente la description textuelle du cas d’utilisation « Passer u
 \hline
 \textbf{Acteur} & Client \\
 \hline
-\textbf{Résumé} & Cas d’utilisation permettant à un client de passer une commande. \\
+\textbf{Résumé} & Cas d'utilisation permettant à un client de passer une commande. \\
 \hline
 \textbf{Préconditions} &
 \begin{itemize}
@@ -728,18 +729,18 @@ Le tableau présente la description textuelle du cas d’utilisation « Passer u
 \textbf{Scénario alternatif} &
 \textbf{A1 : Le client décide de quitter la page}
 \begin{itemize}
-    \item À l’étape 3, le client décide de quitter la page.
+    \item À l'étape 3, le client décide de quitter la page.
     \item Le système affiche la liste des plantes.
-    \item Le client est invité de recommencer à l’étape 1.
+    \item Le client est invité de recommencer à l'étape 1.
 \end{itemize} \\
 \hline
 \end{tabular}
-\caption{Cas d’utilisation « Passer une commande »}
+\caption{Cas d'utilisation « Passer une commande »}
 \end{table}
 
-\subsection{Cas d’utilisation << Suivre commande >>}
+\subsection{Cas d'utilisation << Suivre commande >>}
 
-Le tableau présente la description textuelle du cas d’utilisation « Suivre commande ».
+Le tableau présente la description textuelle du cas d'utilisation « Suivre commande ».
 
 \begin{table}[H]
 \centering
@@ -750,7 +751,7 @@ Le tableau présente la description textuelle du cas d’utilisation « Suivre c
 \hline
 \textbf{Acteur} & Client \\
 \hline
-\textbf{Résumé} & Cas d’utilisation permettant au client de suivre l’état de sa commande. \\
+\textbf{Résumé} & Cas d'utilisation permettant au client de suivre l'état de sa commande. \\
 \hline
 \textbf{Préconditions} &
 \begin{itemize}
@@ -758,21 +759,21 @@ Le tableau présente la description textuelle du cas d’utilisation « Suivre c
     \item Commande créée.
 \end{itemize} \\
 \hline
-\textbf{Postconditions} & L’état de la commande est affiché. \\
+\textbf{Postconditions} & L'état de la commande est affiché. \\
 \hline
 \textbf{Scénario nominal} &
 \begin{enumerate}
     \item Le client clique sur la commande.
-    \item Le système affiche l’état de la commande.
+    \item Le système affiche l'état de la commande.
 \end{enumerate} \\
 \hline
 \end{tabular}
-\caption{Cas d’utilisation « Suivre commande »}
+\caption{Cas d'utilisation « Suivre commande »}
 \end{table}
 
-\subsection{Cas d’utilisation << Effectuer diagnostic >>}
+\subsection{Cas d'utilisation << Effectuer diagnostic >>}
 
-Le tableau présente la description textuelle du cas d’utilisation « Effectuer diagnostic ».
+Le tableau présente la description textuelle du cas d'utilisation « Effectuer diagnostic ».
 
 \begin{table}[H]
 \centering
@@ -781,9 +782,9 @@ Le tableau présente la description textuelle du cas d’utilisation « Effectue
 \hline
 \textbf{Titre} & Effectuer diagnostic \\
 \hline
-\textbf{Acteur} & Client, Module d’assistance au diagnostic \\
+\textbf{Acteur} & Client, Module d'assistance au diagnostic \\
 \hline
-\textbf{Résumé} & Cas d’utilisation permettant au client de diagnostiquer sa plante et recevoir des recommandations. \\
+\textbf{Résumé} & Cas d'utilisation permettant au client de diagnostiquer sa plante et recevoir des recommandations. \\
 \hline
 \textbf{Préconditions} &
 \begin{itemize}
@@ -795,23 +796,23 @@ Le tableau présente la description textuelle du cas d’utilisation « Effectue
 \textbf{Scénario nominal} &
 \begin{enumerate}
     \item Le client clique sur le menu « Diagnostic ».
-    \item Le système affiche un champ de chargement d’une photo.
+    \item Le système affiche un champ de chargement d'une photo.
     \item Le client charge la photo de la plante.
-    \item Le système analyse l’image chargée.
+    \item Le système analyse l'image chargée.
     \item Le système affiche les diagnostics avec des recommandations.
 \end{enumerate} \\
 \hline
-\textbf{Scénario d’erreur} &
+\textbf{Scénario d'erreur} &
 \textbf{E1 : Photo non exploitable}
 \begin{itemize}
-    \item À l’étape 5, le système affiche un message d’erreur indiquant que la photo est inexploitable.
+    \item À l'étape 5, le système affiche un message d'erreur indiquant que la photo est inexploitable.
     \item Le système redemande au client de charger une nouvelle photo.
 \end{itemize} \\
 \hline
 \end{tabular}
-\caption{Cas d’utilisation « Effectuer diagnostic »}
+\caption{Cas d'utilisation « Effectuer diagnostic »}
 \end{table}
 
 \section*{Conclusion}
 
-Après avoir présenté le système à développer, identifié les différents acteurs et réalisé l’analyse fonctionnelle ainsi que l’étude des besoins non fonctionnels, le chapitre suivant sera consacré à la conception générale et détaillée de la solution proposée.
+Après avoir présenté le système à développer, identifié les différents acteurs et réalisé l'analyse fonctionnelle ainsi que l'étude des besoins non fonctionnels, le chapitre suivant sera consacré à la conception générale et détaillée de la solution proposée.

@@ -1,0 +1,68 @@
+This is BibTeX, Version 0.99e
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+Reallocating 'name_of_file' (item size: 1) to 10 items.
+The style file: IEEEtranN.bst
+Reallocating 'name_of_file' (item size: 1) to 7 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: biblio.bib
+Repeated entry---line 101 of file biblio.bib
+ : @online{BloomscapeRef1
+ :                       ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "crispDM1"
+-- IEEEtranN.bst version 1.13 (2008/09/30) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+** Natbib version - not for normal IEEE work.
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+
+Done.
+You've used 7 entries,
+            4783 wiz_defined-function locations,
+            971 strings with 9005 characters,
+and the built_in function-call counts, 3327 in all, are:
+= -- 332
+> -- 21
+< -- 3
++ -- 20
+- -- 6
+* -- 136
+:= -- 578
+add.period$ -- 17
+call.type$ -- 7
+change.case$ -- 21
+chr.to.int$ -- 7
+cite$ -- 11
+duplicate$ -- 237
+empty$ -- 274
+format.name$ -- 9
+if$ -- 693
+int.to.chr$ -- 1
+int.to.str$ -- 8
+missing$ -- 52
+newline$ -- 59
+num.names$ -- 9
+pop$ -- 173
+preamble$ -- 1
+purify$ -- 7
+quote$ -- 2
+skip$ -- 257
+stack$ -- 0
+substring$ -- 32
+swap$ -- 123
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 6
+type$ -- 112
+warning$ -- 0
+while$ -- 6
+width$ -- 0
+write$ -- 107
+(There was 1 error message)
