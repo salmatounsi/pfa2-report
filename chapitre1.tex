@@ -92,19 +92,26 @@ Le travail demandé dans le cadre de ce projet consiste à analyser, concevoir e
 \section{Méthodologie de travail}
 Dans le cadre de ce projet combinant une plateforme E-commerce et un système intelligent de diagnostic et de recommandation, nous avons opté pour deux méthodologies complémentaires : le \textbf{modèle en V} pour le développement de la plateforme applicative et \textbf{CRISP-DM} pour la conception du système intelligent.
 \newline
-Le choix du modèle en V se justifie par la nécessité d'adopter une démarche structurée et rigoureuse dans la conception et la réalisation de la plateforme E-commerce. Les fonctionnalités liées à la gestion des utilisateurs, au catalogue des plantes, aux commandes et au paiement exigent une définition claire des besoins, suivie d'une phase de conception détaillée et de tests associés à chaque étape du développement. Le modèle en V permet ainsi d'assurer une correspondance entre les phases de spécification et les phases de validation, garantissant la cohérence, la fiabilité et la qualité du système développé.
+Le choix du modèle en V se justifie par la nécessité d'adopter une démarche structurée et rigoureuse dans la conception et la réalisation de la plateforme E-commerce. En effet, ce modèle repose sur une correspondance entre les phases de spécification et les phases de validation, permettant ainsi d'assurer la qualité et la fiabilité du système développé \cite{vModelRef}.
 \newline
-La méthodologie CRISP-DM a été retenue pour encadrer la conception du système intelligent de diagnostic et de recommandation. Ce choix s'explique par la nécessité de suivre une démarche méthodique dans l'analyse des données relatives aux plantes, aux symptômes observés et aux traitements possibles. CRISP-DM offre une progression logique allant de la compréhension du domaine métier à l'évaluation du modèle, jusqu'à son intégration au sein de la plateforme.
+La méthodologie CRISP-DM a été retenue pour encadrer la conception du système intelligent de diagnostic et de recommandation. Elle propose une démarche structurée en plusieurs étapes allant de la compréhension du métier à l'évaluation du modèle, facilitant ainsi l'exploitation des données et la mise en œuvre de solutions d'analyse pertinentes \cite{crispdmRef}.
 \newline
 L'association du modèle en V et de CRISP-DM permet ainsi de concilier rigueur et structuration. Le modèle en V assure une organisation claire du développement applicatif et des phases de validation, tandis que CRISP-DM garantit une approche méthodique dans la conception du système intelligent. Cette combinaison constitue un choix adapté aux objectifs et aux contraintes de notre projet.
 \newline
-la \autoref{crispDM} illustre les différentes étapes de la méthodologie CRISP-DM.
+La \autoref{crispDM} illustre les différentes étapes de la méthodologie CRISP-DM.
+et la \autoref{cycleV1} présente les étapes du cycle en V.
+
 \begin{figure} 
 \centering
-\includegraphics[width=0.5\textheight]{images/plantnet.png}
+\includegraphics[width=0.4\textheight]{images/crispdm.png}
 \caption{  Les étapes de la méthodologie CRISP-DM \cite{crispDM1}.}
 \label{fig:crispDM1}
 \end{figure}
-
+\begin{figure} 
+\centering
+\includegraphics[width=0.5\textheight]{images/CycleV.png}
+\caption{Le cycle en V \cite{cycleV}.}
+\label{fig:cycleV1}
+\end{figure}
 \section*{Conclusion}
 Dans ce chapitre introductif, nous avons présenté le contexte général et le sujet de notre projet. Nous y avons également défini la problématique, précisé les objectifs visés ainsi que le travail demandé. Le chapitre suivant sera consacré à l'analyse et à la spécification des besoins du système à développer.

@@ -10,10 +10,6 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: biblio.bib
-Repeated entry---line 101 of file biblio.bib
- : @online{BloomscapeRef1
- :                       ,
-I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "crispDM1"
 -- IEEEtranN.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
@@ -24,45 +20,45 @@ Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
 Reallocating 'global_strs' (item size: 1) to 4000000 items.
 
 Done.
-You've used 7 entries,
+You've used 11 entries,
             4783 wiz_defined-function locations,
-            971 strings with 9005 characters,
-and the built_in function-call counts, 3327 in all, are:
-= -- 332
-> -- 21
-< -- 3
-+ -- 20
-- -- 6
-* -- 136
-:= -- 578
-add.period$ -- 17
-call.type$ -- 7
-change.case$ -- 21
-chr.to.int$ -- 7
-cite$ -- 11
-duplicate$ -- 237
-empty$ -- 274
-format.name$ -- 9
-if$ -- 693
+            993 strings with 9568 characters,
+and the built_in function-call counts, 5367 in all, are:
+= -- 541
+> -- 49
+< -- 7
++ -- 36
+- -- 14
+* -- 205
+:= -- 954
+add.period$ -- 29
+call.type$ -- 11
+change.case$ -- 33
+chr.to.int$ -- 11
+cite$ -- 15
+duplicate$ -- 380
+empty$ -- 433
+format.name$ -- 21
+if$ -- 1121
 int.to.chr$ -- 1
-int.to.str$ -- 8
-missing$ -- 52
-newline$ -- 59
-num.names$ -- 9
-pop$ -- 173
+int.to.str$ -- 12
+missing$ -- 84
+newline$ -- 79
+num.names$ -- 21
+pop$ -- 272
 preamble$ -- 1
-purify$ -- 7
+purify$ -- 11
 quote$ -- 2
-skip$ -- 257
+skip$ -- 419
 stack$ -- 0
-substring$ -- 32
-swap$ -- 123
+substring$ -- 48
+swap$ -- 203
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 6
-type$ -- 112
+type$ -- 176
 warning$ -- 0
-while$ -- 6
+while$ -- 14
 width$ -- 0
-write$ -- 107
-(There was 1 error message)
+write$ -- 158
+(There was 1 warning)

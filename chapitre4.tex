@@ -1,0 +1,67 @@
+\chapter{Construction de modèles d'apprentissage automatique}
+
+\section*{Introduction}
+
+\section{Analyse des problème}
+
+Dans le cadre de notre projet, cette étape est primordiale dans le processus de développement du modèle d'apprentissage automatique. Elle permet de comprendre la nature du problème, les données disponibles ainsi que les contraintes du système.
+\newline
+L'apprentissage automatique est un ensemble de techniques permettant à un système informatique d'apprendre à partir de données afin de réaliser des prédictions ou de prendre des décisions sans être explicitement programmé. Dans notre projet, il est utilisé pour identifier les maladies des plantes.
+\newline
+On distingue principalement trois types d'apprentissage automatique : supervisé, non supervisé et par renforcement, chacun étant adapté à des types de problèmes différents selon la disponibilité des données et les objectifs.
+\newline
+L'apprentissage supervisé repose sur des données étiquetées, où chaque entrée est associée à une sortie connue. Le modèle apprend ainsi à prédire correctement les résultats pour de nouvelles données. Ce type d'apprentissage est particulièrement adapté aux problèmes de diagnostic.
+\newline
+L'apprentissage non supervisé utilise des données non étiquetées afin de découvrir des structures cachées, comme des regroupements ou des anomalies. Il est souvent utilisé pour l'exploration de données, mais reste moins adapté aux tâches de prédiction directe.
+\newline
+L'apprentissage par renforcement est basé sur l'interaction avec un environnement, où un agent apprend à prendre des décisions en maximisant une récompense.
+\newline
+Le diagnostic des maladies des plantes relève de l'apprentissage supervisé, car il nécessite des données annotées reliant des symptômes ou des images à des maladies spécifiques.
+\newline
+Les méthodes d'apprentissage supervisé se divisent en deux grandes catégories : la régression et la classification. La régression est utilisée pour prédire des valeurs continues telles que la température ou le prix d'un produit, tandis que la classification permet de prédire des catégories.
+\newline
+Dans notre projet, le diagnostic correspond à un problème de classification, car il s'agit d'assigner une plante à une maladie spécifique.
+\newline
+La classification peut être binaire, multiclasse ou hiérarchique. La classification binaire distingue deux classes, la classification multiclasse permet de choisir parmi plusieurs catégories, et la classification hiérarchique organise les classes selon différents niveaux.
+\newline
+Dans notre cas, le diagnostic est un problème de classification multiclasse, puisque plusieurs maladies peuvent être identifiées à partir des symptômes ou des images observées.
+Ainsi, l'approche adoptée repose principalement sur des techniques de classification supervisée afin d'assurer un diagnostic précis.\cite{refAnalyse}
+\section{Workflow global}
+Pour le développement de ces deux modèles, nous avons suivi la démarche standard de construction de modèles de l'apprentissage automatique représentée par la \autoref{crispDM2} inspiré par la méthode CRISP-DM.
+\newline
+
+
+\section{Diagnostic des plantes}
+
+\section{Diagnostic des plantes}
+
+\subsection{Extraction et compréhension de données}
+
+\subsection{Préparation de données}
+
+\subsubsection{Nettoyage de données}
+
+\subsubsection{Normalisation de données}
+
+\subsubsection{Fractionnement de données}
+
+\subsection{Modélisation}
+
+\subsubsection{Support Vector Classifier ( SVM )}
+
+\subsubsection{Gaussian Naive Bayes Classifier ( GNB )}
+
+\subsubsection{Random Forest Classifier ( RFC )}
+
+\subsection{Evaluation}
+
+
+
+
+
+
+
+
+
+
+
