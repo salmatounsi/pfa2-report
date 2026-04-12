@@ -5,58 +5,104 @@
 \section{Analyse des problème}
 
 Dans le cadre de notre projet, cette étape est primordiale dans le processus de développement du modèle d'apprentissage automatique. Elle permet de comprendre la nature du problème, les données disponibles ainsi que les contraintes du système.
-\newline
+
 L'apprentissage automatique est un ensemble de techniques permettant à un système informatique d'apprendre à partir de données afin de réaliser des prédictions ou de prendre des décisions sans être explicitement programmé. Dans notre projet, il est utilisé pour identifier les maladies des plantes.
-\newline
+
 On distingue principalement trois types d'apprentissage automatique : supervisé, non supervisé et par renforcement, chacun étant adapté à des types de problèmes différents selon la disponibilité des données et les objectifs.
-\newline
+
 L'apprentissage supervisé repose sur des données étiquetées, où chaque entrée est associée à une sortie connue. Le modèle apprend ainsi à prédire correctement les résultats pour de nouvelles données. Ce type d'apprentissage est particulièrement adapté aux problèmes de diagnostic.
-\newline
+
 L'apprentissage non supervisé utilise des données non étiquetées afin de découvrir des structures cachées, comme des regroupements ou des anomalies. Il est souvent utilisé pour l'exploration de données, mais reste moins adapté aux tâches de prédiction directe.
-\newline
+
 L'apprentissage par renforcement est basé sur l'interaction avec un environnement, où un agent apprend à prendre des décisions en maximisant une récompense.
-\newline
+
 Le diagnostic des maladies des plantes relève de l'apprentissage supervisé, car il nécessite des données annotées reliant des symptômes ou des images à des maladies spécifiques.
-\newline
+
 Les méthodes d'apprentissage supervisé se divisent en deux grandes catégories : la régression et la classification. La régression est utilisée pour prédire des valeurs continues telles que la température ou le prix d'un produit, tandis que la classification permet de prédire des catégories.
-\newline
+
 Dans notre projet, le diagnostic correspond à un problème de classification, car il s'agit d'assigner une plante à une maladie spécifique.
-\newline
+
 La classification peut être binaire, multiclasse ou hiérarchique. La classification binaire distingue deux classes, la classification multiclasse permet de choisir parmi plusieurs catégories, et la classification hiérarchique organise les classes selon différents niveaux.
-\newline
+
 Dans notre cas, le diagnostic est un problème de classification multiclasse, puisque plusieurs maladies peuvent être identifiées à partir des symptômes ou des images observées.
 Ainsi, l'approche adoptée repose principalement sur des techniques de classification supervisée afin d'assurer un diagnostic précis.\cite{refAnalyse}
 \section{Workflow global}
-Pour le développement de ces deux modèles, nous avons suivi la démarche standard de construction de modèles de l'apprentissage automatique représentée par la \autoref{crispDM2} inspiré par la méthode CRISP-DM.
-\newline
+Afin de développer le modèle de diagnostic, nous avons suivi la démarche standard de construction de modèles de l'apprentissage automatique représentée par la méthode CRISP-DM.
+
+Tout d'abord, nous entamons le processus par l'extraction et la compréhention des données.
+Ensuite, nous procédons à la préparation de données par l'élimination de toute
+données non nécessaire ou incomplète et par leur normalisation.
+Une fois ces étapes réalisées, nous passons au développement du modèle, suivi de son entraînement, de son évaluation et de sa validation.
 
 
-\section{Diagnostic des plantes}
-
-\section{Diagnostic des plantes}
-
+\section{Diagnostic de maladies de plantes}
+Dans le cadre du diagnostic des maladies des plantes, les données jouent un rôle essentiel en permettant d'identifier avec précision les pathologies végétales et de proposer des solutions de traitement adaptées et efficaces.
 \subsection{Extraction et compréhension de données}
+Les données relatives aux maladies des plantes peuvent être collectées à partir de multiples sources. En effet, les agriculteurs, les chercheurs et universités spécialisés en agronomie et en phytopathologie, les instituts de recherche agronomique, ainsi que les ingénieurs et techniciens agricoles contribuent activement à la collecte d'informations fiables. De plus, les organisations agricoles et les coopératives permettent de centraliser ces données à plus grande échelle. Enfin, l'utilisation de technologies modernes telles que les drones et les capteurs IoT facilite l'acquisition automatique de données, notamment des images et des paramètres environnementaux, améliorant ainsi la compréhension globale des maladies des plantes.
+
+Nous avons collecté les données de TensorFlow qui  est une bibliothèque open source dédiée au calcul numérique, au machine learning à grande échelle, au deep learning et autres charges de travail de statistique et d'analytique prédictive  \cite{tensorFlow}.
+
+L'ensemble de données complet est un dataset nommé plant\_village, il se compose de 54303 images de feuilles de plantes saines et malades divisé en 39 catégories par espèce de pantes et maladies.
+
+La \autoref{fig:exempledataset} présente quelques exemples du dataset.
+
+\begin{figure} 
+\centering
+\includegraphics[height=0.5
+\textheight]{images/plant_village-1.0.2.png}
+\caption{ Exemples des images de dataset p
+lant\_village \cite{tensorFlow}.}
+\label{fig:exempledataset}
+\end{figure}
 
 \subsection{Préparation de données}
-
 \subsubsection{Nettoyage de données}
+Nous utiliserons le graphique à barres dans la \autoref{fig:desequilibre} pour vérifier si l'ensemble de données est
+équilibré ou non.
+
+\begin{figure} 
+\centering
+\includegraphics[height=0.5
+\textheight]{images/desequilibre.png}
+\caption{ Graphique à barres représentant l'équilibre de notre dataset.}
+\label{fig:desequilibre}
+\end{figure}
+Les résultats montrent que le dataset est déséquilibré, certaines classes contenant environ 1000 images tandis que d’autres dépassent 5000 images. Ce déséquilibre peut influencer les performances du modèle d’apprentissage automatique en favorisant les classes majoritaires.
+
+Le rééquilibrage de l’ensemble de données sera effectué après la phase de fractionnement (train, validation et test), afin de garantir une séparation correcte des données et d’éviter toute fuite d’information entre les ensembles.
 
 \subsubsection{Normalisation de données}
-
+Dans le cadre du prétraitement des données, une étape de normalisation a été appliquée aux images d’entrée. Les valeurs des pixels, initialement comprises entre 0 et 255, ont été ramenées dans l’intervalle [0,1] en les divisant par 255. Cette transformation permet d’améliorer la stabilité numérique du modèle et d’accélérer la convergence lors de l’apprentissage.
 \subsubsection{Fractionnement de données}
-
+Après la phase de normalisation des données, le dataset est ensuite fractionné en trois ensembles distincts : un ensemble d’entraînement (training set), un ensemble de validation (validation set) et un ensemble de test (test set). Cette répartition permet d’assurer une évaluation fiable et objective des performances du modèle à chaque étape du processus de développement. Par ailleurs, afin d’améliorer la qualité de l’apprentissage, l’ensemble d’entraînement est équilibré afin de réduire les déséquilibres entre les différentes classes, en attribuant des poids plus élevés aux classes minoritaires et des poids plus faibles aux classes majoritaires, ce qui permet au modèle de limiter les biais et de mieux généraliser.
 \subsection{Modélisation}
-
-\subsubsection{Support Vector Classifier ( SVM )}
-
-\subsubsection{Gaussian Naive Bayes Classifier ( GNB )}
-
-\subsubsection{Random Forest Classifier ( RFC )}
-
+La phase de modélisation consiste à concevoir et à mettre en œuvre une approche d’apprentissage automatique adaptée à la classification des maladies des plantes à partir d’images.
+\subsubsection{Approche utilisée : Transfer Learning}
+Dans ce travail, nous adoptons une approche basée sur le transfert d’apprentissage (Transfer Learning),qui consiste à exploiter un modèle de réseau de neurones convolutionnel préentraîné sur une large base de données, puis à l’adapter à notre problème spécifique de classification des maladies des plantes. \cite{transferlearnin}
+\subsubsection{Architecture du modèle : EfficientNetB4}
+Nous utilisons le modèle EfficientNetB4, une architecture de réseau de neurones convolutionnel reconnue pour son équilibre entre performance et efficacité computationnelle. Ce modèle préentraîné permet d’extraire des caractéristiques pertinentes des images tout en réduisant le temps d’entraînement et les besoins en données. \cite{EfficientNetB4}
+\subsubsection{Fine-tuning du modèle}
+Afin d’adapter EfficientNetB4 à notre problème spécifique, nous procédons à une étape de fine-tuning.Cette étape consiste à réentraîner certaines couches du modèle sur notre dataset de maladies des plantes, tout en conservant les poids appris lors de l’entraînement initial. Des couches de classification sont ajoutées à la sortie du modèle afin de produire les prédictions finales. 
 \subsection{Evaluation}
+Une fois le modèle construit et entraîné, nous passons à la phase d’évaluation afin de mesurer ses performances.
+Les performances du modèle proposé basé sur EfficientNetB4 ont été évaluées à l’aide des métriques d’accuracy et de loss sur les ensembles d’entraînement et de validation. Comme illustré dans la \autoref{fig:eval} , le modèle atteint une précision élevée et stable, avoisinant 97 \% sur l’ensemble d’entraînement et entre 95 \% et 98 \% sur l’ensemble de validation après la phase de fine-tuning.
 
+Les courbes de perte montrent une diminution progressive au fil des époques, ce qui indique que le modèle apprend correctement les caractéristiques pertinentes du dataset. Après le début de la phase de fine-tuning, on observe de légères fluctuations au niveau de l’accuracy et de la loss, mais le modèle se stabilise rapidement et continue à s’améliorer.
 
+Dans l’ensemble, ces résultats montrent que le modèle généralise bien sur des données non vues et ne présente pas de surapprentissage significatif, ce qui confirme l’efficacité de l’approche par transfert d’apprentissage basée sur EfficientNetB4 pour la classification des maladies des plantes.
 
+\begin{figure} 
+\centering
+\includegraphics[height=0.5
+\textheight]{images/evaluation.png}
+\caption{ Evaluation des résultats de l'entrainement du model de diagnostic.}
+\label{fig:eval}
+\end{figure}
+
+\subsection*{Conclusion}
+Dans ce chapitre nous avons explicité la construction du modèle de diagnostic des maladies. 
+Dans ce qui suit, nous allons aborder les environnements matériel et logiciel du projet et présenter les différentes interfaces et
+fonctionnalités de la plate-forme DigiMed développée.
 
 
 
