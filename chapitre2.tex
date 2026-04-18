@@ -10,7 +10,7 @@ pinière intelligente permettant de centraliser la gestion des plantes et de leu
 
 \section{Identification des acteurs}
 
-Le tableau suivant présente les différents acteurs de notre système.
+Le \autoref{tableau 0} suivant présente les différents acteurs de notre système.
 
 \begin{table}[H]
 \centering
@@ -43,7 +43,7 @@ Client & Primaire &
     \item Effectuer diagnostic
 \end{itemize} \\
 \hline
-Module d'assistance au diagnostic & Secondaire &
+Module d'assistance au diagnostic et recommandation & Secondaire &
 \begin{itemize}
     \item Générer les diagnostics
     \item Générer les recommandations
@@ -51,6 +51,7 @@ Module d'assistance au diagnostic & Secondaire &
 \hline
 \end{tabular}
 \caption{Les différents acteurs du système}
+\label{tableau 0}
 \end{table}
 
 \section{Besoins fonctionnels}
@@ -80,10 +81,10 @@ L'administrateur dispose de l'ensemble des fonctionnalités du vendeur, en plus 
 
 Toutes ces fonctionnalités ne peuvent être réalisées qu'après une authentification.
 
-\subsection*{Module d'assistance au diagnostic}
+\subsection*{Module d'assistance au diagnostic et recommandation}
 \begin{itemize}
     \item Le système doit intégrer un module d'intelligence artificielle chargé de l'analyse des images des plantes.
-    \item Le module IA doit traiter les images envoyées par les clients et retourner un résultat de diagnostic.
+    \item Le module IA doit traiter les images envoyées par les clients et retourner un résultat de diagnostic et recommandations.
 \end{itemize}
 
 \section{Besoins non fonctionnels}
@@ -99,7 +100,6 @@ Les exigences non fonctionnelles visent à garantir la qualité, la fiabilité e
 \subsection*{Performance}
 \begin{itemize}
     \item La plateforme doit être capable de gérer simultanément un nombre important d'utilisateurs, de consultations du catalogue et de commandes.
-    \item Le système de diagnostic intelligent doit fournir des résultats dans des délais acceptables afin de garantir une expérience utilisateur fluide.
 \end{itemize}
 
 \subsection*{Sécurité}
@@ -108,22 +108,20 @@ Les exigences non fonctionnelles visent à garantir la qualité, la fiabilité e
     \item Un mécanisme de validation des comptes utilisateurs (vérification de l'e-mail) doit être mis en place afin de limiter les accès frauduleux.
 \end{itemize}
 
-\subsection*{Fiabilité et disponibilité}
-\begin{itemize}
-    \item La plateforme doit être disponible de manière continue, avec un minimum d'interruptions.
-\end{itemize}
-
 \subsection*{Évolutivité}
 \begin{itemize}
-    \item L'architecture de la plateforme doit permettre l'intégration future de nouvelles fonctionnalités, notamment l'amélioration du système intelligent de diagnostic et de recommandation.
+    \item L'architecture de la plateforme doit permettre l'intégration future de nouvelles fonctionnalités, notamment l'amélioration du système de diagnostic intelligent et de recommandation.
 \end{itemize}
 
 \section{Diagramme de cas d'utilisation global}
 
+La \autoref{figure 1} présente le diagrame de cas d'utilisation global.
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{images/diag cas d'utilisation global.png}
+    \includegraphics[width=0.85\textwidth]{images/CasUtilisation2.png}
     \caption{Diagramme de cas d'utilisation global}
+    \label{figure 1}
 \end{figure}
 
 \section{Raffinement des cas d'utilisation}
@@ -131,27 +129,29 @@ Les exigences non fonctionnelles visent à garantir la qualité, la fiabilité e
 \subsection{Cas d'utilisation << Gérer plante >>}
 
 Ce cas d'utilisation permet au vendeur ou à l'administrateur de modifier le stock, modifier, supprimer et ajouter une plante.
+La \autoref{figure 2} présente le raffinement de cas d'utilisation << Gérer plante >>.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{images/gérer plante.png}
+    \includegraphics[width=0.75\textwidth]{images/gerer plante2.png}
     \caption{Raffinement du cas d'utilisation « Gérer plante »}
+    \label{figure 2}
 \end{figure}
 
-\subsubsection{Cas d'utilisation << Modifier le stock >>}
+\subsubsection{Cas d'utilisation << Modifier le stock d'une plante>>}
 
-Le tableau présente la description textuelle du cas d'utilisation « Modifier le stock ».
+Le \autoref{tableau1} présente la description textuelle du cas d'utilisation « Modifier le stock d'une plante».
 
 \begin{table}[H]
 \centering
 \renewcommand{\arraystretch}{1.4}
 \begin{tabular}{|p{4cm}|p{10cm}|}
 \hline
-\textbf{Titre} & Modifier le stock \\
+\textbf{Titre} & Modifier le stock d'une plante \\
 \hline
 \textbf{Acteur} & Vendeur, Administrateur \\
 \hline
-\textbf{Résumé} & Cas d'utilisation permettant à un vendeur ou à un administrateur de modifier le stock. \\
+\textbf{Résumé} & Cas d'utilisation permettant à un vendeur ou à un administrateur de modifier le stock d'une plante. \\
 \hline
 \textbf{Préconditions} &
 \begin{itemize}
@@ -169,7 +169,7 @@ Le tableau présente la description textuelle du cas d'utilisation « Modifier l
 \begin{enumerate}
     \item Le vendeur/administrateur accède à l'interface de gestion des plantes.
     \item Le système affiche la liste des plantes.
-    \item L'acteur sélectionne le produit à modifier.
+    \item L'acteur sélectionne la plante à modifier.
     \item Le système affiche les détails de la plante, y compris la quantité en stock actuelle.
     \item L'acteur saisit la nouvelle quantité en stock.
     \item L'acteur valide la modification.
@@ -185,12 +185,13 @@ Le tableau présente la description textuelle du cas d'utilisation « Modifier l
 \end{itemize} \\
 \hline
 \end{tabular}
-\caption{Cas d'utilisation « Modifier le stock »}
+\caption{Cas d'utilisation « Modifier le stock d'une plante»}
+\label{tableau1}
 \end{table}
 
 \subsubsection{Cas d'utilisation << Modifier plante >>}
 
-Le tableau présente la description textuelle du cas d'utilisation « Modifier plante ».
+Le \autoref{tableau 2} présente la description textuelle du cas d'utilisation « Modifier plante ».
 
 \begin{table}[H]
 \centering
@@ -211,7 +212,7 @@ Le tableau présente la description textuelle du cas d'utilisation « Modifier p
 \hline
 \textbf{Postconditions} &
 \begin{itemize}
-    \item La description de la plante est mise à jour.
+    \item Les données de la plante sont mises à jour.
 \end{itemize} \\
 \hline
 \textbf{Scénario nominal} &
@@ -227,11 +228,12 @@ Le tableau présente la description textuelle du cas d'utilisation « Modifier p
 \hline
 \end{tabular}
 \caption{Cas d'utilisation « Modifier plante »}
+\label{tableau 2}
 \end{table}
 
 \subsubsection{Cas d'utilisation << Ajouter plante >>}
 
-Le tableau présente la description textuelle du cas d'utilisation « Ajouter plante ».
+Le \autoref{tableau 3} présente la description textuelle du cas d'utilisation « Ajouter plante ».
 
 \begin{table}[H]
 \centering
@@ -272,11 +274,12 @@ Le tableau présente la description textuelle du cas d'utilisation « Ajouter pl
 \hline
 \end{tabular}
 \caption{Cas d'utilisation « Ajouter plante »}
+\label{tableau 3}
 \end{table}
 
 \subsubsection{Cas d'utilisation << Supprimer plante >>}
 
-Le tableau présente la description textuelle du cas d'utilisation « Supprimer plante ».
+Le \autoref{tableau 4} présente la description textuelle du cas d'utilisation « Supprimer plante ».
 
 \begin{table}[H]
 \centering
@@ -309,18 +312,22 @@ Le tableau présente la description textuelle du cas d'utilisation « Supprimer 
 \hline
 \end{tabular}
 \caption{Cas d'utilisation « Supprimer plante »}
+\label{tableau 4}
 \end{table}
 
 \subsection{Cas d'utilisation << Consulter plantes >>}
 
 Ce cas d'utilisation permet au vendeur de consulter la liste des plantes.
+La \autoref{figure 3} repésente le raffinement du cas d'utilisation << Consulter plantes >>.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{images/consulter plantes.png}
+    \includegraphics[width=0.75\textwidth]{images/consulterPlanteVendeur.png}
     \caption{Raffinement du cas d'utilisation « Consulter plantes »}
+    \label{figure 3}
 \end{figure}
 
+le \autoref{tableau 5} représente la description textuelle de cas d'utilisation « Consulter plantes ».
 \begin{table}[H]
 \centering
 \renewcommand{\arraystretch}{1.4}
@@ -361,17 +368,21 @@ Ce cas d'utilisation permet au vendeur de consulter la liste des plantes.
 \hline
 \end{tabular}
 \caption{Cas d'utilisation « Consulter plantes »}
+\label{tableau 5}
 \end{table}
 
 \subsection{Cas d'utilisation << Consulter commandes >>}
 
-Le tableau présente la description textuelle du cas d'utilisation « Consulter commandes ».
+La \autoref{figure 4} présente le raffinement du cas d'utilisation « Consulter commandes ».
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{images/consulter commandes.png}
+    \includegraphics[width=0.75\textwidth]{images/consulter commandes2.png}
     \caption{Raffinement du cas d'utilisation « Consulter commandes »}
+    \label{figure 4}
 \end{figure}
+
+le \autoref{tableau 6} présente la description textuelle du cas d'utilisation « Consulter commandes ».
 
 \begin{table}[H]
 \centering
@@ -413,21 +424,12 @@ Le tableau présente la description textuelle du cas d'utilisation « Consulter 
 \hline
 \end{tabular}
 \caption{Cas d'utilisation « Consulter commandes »}
+\label{tableau 6}
 \end{table}
-
-\subsection{Cas d'utilisation << Gérer commandes >>}
-
-Ce cas d'utilisation permet au vendeur ainsi qu'à l'administrateur de gérer les commandes passées par les clients.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.75\textwidth]{images/gérer commandes.png}
-    \caption{Raffinement du cas d'utilisation « Gérer commandes »}
-\end{figure}
 
 \subsubsection{Cas d'utilisation << Accepter commande >>}
 
-Le tableau présente la description textuelle du cas d'utilisation « Accepter commande ».
+Le \autoref{tableau 7} présente la description textuelle du cas d'utilisation « Accepter commande ».
 
 \begin{table}[H]
 \centering
@@ -443,14 +445,14 @@ Le tableau présente la description textuelle du cas d'utilisation « Accepter c
 \textbf{Préconditions} &
 \begin{itemize}
     \item Acteur authentifié.
-    \item Commande avec statut « En attente ».
+    \item Commande avec statut « Passée ».
 \end{itemize} \\
 \hline
 \textbf{Postconditions} & Statut de la commande mis à « Acceptée ». \\
 \hline
 \textbf{Scénario nominal} &
 \begin{enumerate}
-    \item L'acteur sélectionne une commande en attente.
+    \item L'acteur sélectionne une commande En attente.
     \item Le système affiche les détails de la commande.
     \item L'acteur clique sur « Accepter ».
     \item Le système vérifie la disponibilité du stock.
@@ -472,11 +474,12 @@ Le tableau présente la description textuelle du cas d'utilisation « Accepter c
 \hline
 \end{tabular}
 \caption{Cas d'utilisation « Accepter commande »}
+\label{tableau 7}
 \end{table}
 
 \subsubsection{Cas d'utilisation << Refuser commande >>}
 
-Le tableau présente la description textuelle du cas d'utilisation « Refuser commande ».
+Le \autoref{tableau 8} présente la description textuelle du cas d'utilisation « Refuser commande ».
 
 \begin{table}[H]
 \centering
@@ -499,7 +502,7 @@ Le tableau présente la description textuelle du cas d'utilisation « Refuser co
 \hline
 \textbf{Scénario nominal} &
 \begin{enumerate}
-    \item L'acteur sélectionne une commande en attente.
+    \item L'acteur sélectionne une commande En attente.
     \item Le système affiche les détails de la commande.
     \item L'acteur clique sur « Refuser ».
     \item Le système met à jour le statut de la commande et affiche un message de confirmation.
@@ -514,21 +517,24 @@ Le tableau présente la description textuelle du cas d'utilisation « Refuser co
 \hline
 \end{tabular}
 \caption{Cas d'utilisation « Refuser commande »}
+\label{tableau 8}
 \end{table}
 
 \subsection{Cas d'utilisation << Gérer comptes utilisateurs >>}
 
-Ce cas d'utilisation permet à l'administrateur de gérer les comptes utilisateurs.
+Ce cas d'utilisation permet à l'administrateur de gérer les comptes utilisateurs. 
+La \autoref{figure 5} représente le raffinement du cas d'utilisation << Gérer comptes utilisateurs >>
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\textwidth]{images/gérer comptes utilisateurs.png}
     \caption{Raffinement du cas d'utilisation « Gérer comptes utilisateurs »}
+    \label{figure 5}
 \end{figure}
 
 \subsubsection{Cas d'utilisation << Activer compte utilisateur >>}
 
-Le tableau présente la description textuelle du cas d'utilisation « Activer compte utilisateur ».
+Le \autoref{tableau 9} présente la description textuelle du cas d'utilisation « Activer compte utilisateur ».
 
 \begin{table}[H]
 \centering
@@ -559,11 +565,12 @@ Le tableau présente la description textuelle du cas d'utilisation « Activer co
 \hline
 \end{tabular}
 \caption{Cas d'utilisation « Activer compte utilisateur »}
+\label{tableau 9}
 \end{table}
 
 \subsubsection{Cas d'utilisation << Désactiver compte utilisateur >>}
 
-Le tableau présente la description textuelle du cas d'utilisation « Désactiver compte utilisateur ».
+Le \autoref{tableau 10} présente la description textuelle du cas d'utilisation « Désactiver compte utilisateur ».
 
 \begin{table}[H]
 \centering
@@ -594,17 +601,21 @@ Le tableau présente la description textuelle du cas d'utilisation « Désactive
 \hline
 \end{tabular}
 \caption{Cas d'utilisation « Désactiver compte utilisateur »}
+\label{tableau 10}
 \end{table}
 
 \subsection{Cas d'utilisation << Consulter comptes utilisateurs >>}
 
-Le tableau présente la description textuelle du cas d'utilisation « Consulter comptes utilisateurs ».
+La \autoref{figure 6} présente le raffinement du cas d'utilisation « Consulter comptes utilisateurs ».
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\textwidth]{images/consulter comptes utilisateurs.png}
     \caption{Raffinement du cas d'utilisation « Consulter comptes utilisateurs »}
+    \label{figure 6}
 \end{figure}
+
+Le tableau \autoref{tableau 11} représente la description textuelle du cas d'utilisation « Consulter comptes utilisateurs »
 
 \begin{table}[H]
 \centering
@@ -646,9 +657,121 @@ Le tableau présente la description textuelle du cas d'utilisation « Consulter 
 \hline
 \end{tabular}
 \caption{Cas d'utilisation « Consulter comptes utilisateurs »}
+\label{tableau 11}
+\end{table}
+
+\subsubsection{Cas d'utilisation << Consulter panier >>}
+La \autoref{figure 7} présente le raffinement du cas d'utilisation « Consulter panier ».
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{images/Consulter panier2.png}
+    \caption{Raffinement du cas d'utilisation « Consulter panier »}
+    \label{figure 7}
+\end{figure}
+
+
+Le \autoref{tableau 12} présente la description textuelle du cas d'utilisation « Consulter panier ».
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Titre} & Consulter panier \\
+\hline
+\textbf{Acteur} & Client \\
+\hline
+\textbf{Résumé} & Cas d'utilisation permettant au client de consulter son panier \\
+\hline
+\textbf{Préconditions} &
+\begin{itemize}
+    \item Client authentifié.
+    \item Panier existe
+\end{itemize} \\
+\hline
+\textbf{Postconditions} & Affichage des plantes existantes dans le panier. \\
+\hline
+\textbf{Scénario nominal} &
+\begin{enumerate}
+    \item Le client clique sur le panier.
+    \item Le système affiche la liste des plantes existante dans le panier.
+\end{enumerate} \\
+\hline
+\textbf{Scénario alternatif} &
+\textbf{A1 : Valider panier}
+\begin{itemize}
+    \item À l'étape 2, le client valide le panier.
+    \item Le système affiche la commande avec le statut en attente .
+\end{itemize}
+\textbf{A2 : Modification de la quantité}
+\begin{itemize}
+    \item À l'étape 3, le client modifie la quantité avant la confirmation.
+    \item Le système prend en compte la nouvelle quantité.
+\end{itemize} \\
+\hline
+\end{tabular}
+\caption{Cas d'utilisation « Consulter panier »}
+\label{tableau 12}
+\end{table}
+
+\subsection{Cas d'utilisation << Consulter plantes disponibles à la vente >>}
+
+Ce cas d'utilisation permet au vendeur de consulter la liste des plantes. 
+La \autoref{figure 8} présente le raffinement du cas d'utilisation << Consulter plantes disponibles à la vente >>. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{images/ConsulterPlanteClient.png}
+    \caption{Raffinement du cas d'utilisation « Consulter plantes disponibles à la vente»}
+    \label{figure 8}
+\end{figure}
+Le \autoref{tableau 13} représente la description textuelle du cas d'utilisation « Consulter plantes disponibles à la vente».
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Titre} & Consulter plantes disponibles à la vente \\
+\hline
+\textbf{Acteur} & Client \\
+\hline
+\textbf{Résumé} & Cas d'utilisation permettant au client d'accéder à la liste des plantes disponibles à la vente. \\
+\hline
+\textbf{Préconditions} &
+\begin{itemize}
+    \item client authentifié.
+    \item Plantes enregistrées dans la base de données et disponibles à la vente.
+\end{itemize} \\
+\hline
+\textbf{Postconditions} & Liste des plantes disponibles à la vente affichée. \\
+\hline
+\textbf{Scénario nominal} &
+\begin{enumerate}
+    \item Le client accède à la section « Plantes ».
+    \item Le système affiche la liste des plantes disponibles à la vente.
+\end{enumerate} \\
+\hline
+\textbf{Scénario alternatif} &
+\textbf{A1 : Filtrer les plantes}
+\begin{itemize}
+    \item À l'étape 2, le client choisit de filtrer les plantes selon un des critères suivants (plante d'intérieur, d'extérieur, prix, besoin en lumière, eau, température...).
+    \item Le système reprend à l'étape 2.
+\end{itemize}
+
+\textbf{A2 : Rechercher une plante}
+\begin{itemize}
+    \item À l'étape 2, le client choisit de rechercher une plante en tapant un mot clé.
+    \item Le système reprend à l'étape 2.
+\end{itemize} \\
+\hline
+\end{tabular}
+\caption{Cas d'utilisation « Consulter plantes disponibles à la vente »}
+\label{tableau 13}
 \end{table}
 
 \subsection{Cas d'utilisation << Ajouter une plante au panier >>}
+Le \autoref{tableau 14} présente la description textuelle du cas d'utilisation << Ajouter une plante au panier >>.
 
 \begin{table}[H]
 \centering
@@ -678,69 +801,14 @@ Le tableau présente la description textuelle du cas d'utilisation « Consulter 
     \item Le système enregistre la plante dans le panier et affiche un message de confirmation.
 \end{enumerate} \\
 \hline
-\textbf{Scénario alternatif} &
-\textbf{A1 : Modification de la quantité}
-\begin{itemize}
-    \item À l'étape 3, le client modifie la quantité avant la confirmation.
-    \item Le système prend en compte la nouvelle quantité.
-\end{itemize} \\
-\hline
 \end{tabular}
 \caption{Cas d'utilisation « Ajouter une plante au panier »}
-\end{table}
-
-\subsection{Cas d'utilisation << Passer une commande >>}
-
-Le tableau présente la description textuelle du cas d'utilisation « Passer une commande ».
-
-\begin{table}[H]
-\centering
-\renewcommand{\arraystretch}{1.4}
-\begin{tabular}{|p{4cm}|p{10cm}|}
-\hline
-\textbf{Titre} & Passer une commande \\
-\hline
-\textbf{Acteur} & Client \\
-\hline
-\textbf{Résumé} & Cas d'utilisation permettant à un client de passer une commande. \\
-\hline
-\textbf{Préconditions} &
-\begin{itemize}
-    \item Client authentifié.
-    \item Plante disponible à la vente.
-\end{itemize} \\
-\hline
-\textbf{Postconditions} &
-\begin{itemize}
-    \item Stock mis à jour.
-    \item Reçu de la commande.
-\end{itemize} \\
-\hline
-\textbf{Scénario nominal} &
-\begin{enumerate}
-    \item Le client choisit une plante.
-    \item Les détails de la plante sont affichés.
-    \item Le client ajoute la plante au panier.
-    \item La fiche des coordonnées est affichée.
-    \item Le client remplit la fiche avec ses coordonnées.
-    \item Le reçu de la commande est affiché.
-\end{enumerate} \\
-\hline
-\textbf{Scénario alternatif} &
-\textbf{A1 : Le client décide de quitter la page}
-\begin{itemize}
-    \item À l'étape 3, le client décide de quitter la page.
-    \item Le système affiche la liste des plantes.
-    \item Le client est invité de recommencer à l'étape 1.
-\end{itemize} \\
-\hline
-\end{tabular}
-\caption{Cas d'utilisation « Passer une commande »}
+\label{tableau 14}
 \end{table}
 
 \subsection{Cas d'utilisation << Suivre commande >>}
 
-Le tableau présente la description textuelle du cas d'utilisation « Suivre commande ».
+Le \autoref{tableau 15} présente la description textuelle du cas d'utilisation « Suivre commande ».
 
 \begin{table}[H]
 \centering
@@ -769,11 +837,12 @@ Le tableau présente la description textuelle du cas d'utilisation « Suivre com
 \hline
 \end{tabular}
 \caption{Cas d'utilisation « Suivre commande »}
+\label{tableau 15}
 \end{table}
 
 \subsection{Cas d'utilisation << Effectuer diagnostic >>}
 
-Le tableau présente la description textuelle du cas d'utilisation « Effectuer diagnostic ».
+Le \autoref{tableau 16} présente la description textuelle du cas d'utilisation « Effectuer diagnostic ».
 
 \begin{table}[H]
 \centering
@@ -782,16 +851,16 @@ Le tableau présente la description textuelle du cas d'utilisation « Effectuer 
 \hline
 \textbf{Titre} & Effectuer diagnostic \\
 \hline
-\textbf{Acteur} & Client, Module d'assistance au diagnostic \\
+\textbf{Acteur} & Client, Module d'assistance au diagnostic et recommandation \\
 \hline
-\textbf{Résumé} & Cas d'utilisation permettant au client de diagnostiquer sa plante et recevoir des recommandations. \\
+\textbf{Résumé} & Cas d'utilisation permettant au client de diagnostiquer sa plante. \\
 \hline
 \textbf{Préconditions} &
 \begin{itemize}
     \item Client authentifié.
 \end{itemize} \\
 \hline
-\textbf{Postconditions} & Le diagnostic de la plante et les recommandations sont affichées. \\
+\textbf{Postconditions} & Le diagnostic de la plante est affiché. \\
 \hline
 \textbf{Scénario nominal} &
 \begin{enumerate}
@@ -799,7 +868,7 @@ Le tableau présente la description textuelle du cas d'utilisation « Effectuer 
     \item Le système affiche un champ de chargement d'une photo.
     \item Le client charge la photo de la plante.
     \item Le système analyse l'image chargée.
-    \item Le système affiche les diagnostics avec des recommandations.
+    \item Le système affiche le diagnostic de la plante.
 \end{enumerate} \\
 \hline
 \textbf{Scénario d'erreur} &
@@ -811,6 +880,40 @@ Le tableau présente la description textuelle du cas d'utilisation « Effectuer 
 \hline
 \end{tabular}
 \caption{Cas d'utilisation « Effectuer diagnostic »}
+\label{tableau 16}
+\end{table}
+
+\subsection{Cas d'utilisation << Consulter les recommandations >>}
+
+Le \autoref{tableau 17} présente la description textuelle du cas d'utilisation « Consulter les recommandations ».
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Titre} & Consulter les recommandations \\
+\hline
+\textbf{Acteur} & Client \\
+\hline
+\textbf{Résumé} & Cas d'utilisation permettant au client de consulter les recommandations. \\
+\hline
+\textbf{Préconditions} &
+\begin{itemize}
+    \item Client authentifié.
+\end{itemize} \\
+\hline
+\textbf{Postconditions} & Les recommandations sont affichés. \\
+\hline
+\textbf{Scénario nominal} &
+\begin{enumerate}
+    \item Le client clique sur le menu « Historique recommandations ».
+    \item Le système affiche les diagnostics effectués avec les recommandations prosposées.
+\end{enumerate} \\
+\hline
+\end{tabular}
+\caption{Cas d'utilisation « Consulter recommandations »}
+\label{tableau 17}
 \end{table}
 
 \section*{Conclusion}
