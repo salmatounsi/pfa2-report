@@ -9,3 +9,7 @@
 *.bbl
 *.blggit 
 *.blg
+*.aux
+*.log
+*.out
+*.synctex
