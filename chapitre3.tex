@@ -1,5 +1,5 @@
 \chapter{Conception}
-\date{}
+
 \section*{Introduction}
 
 Après avoir réalisé l'analyse et la spécification des besoins de la plateforme de pépinière, nous consacrons ce chapitre à la phase de conception du système.
@@ -27,14 +27,14 @@ Il permet également aux vendeurs et administrateurs de consulter les commandes 
 Ce module permet d'assister les utilisateurs dans l'identification des problèmes liés à leurs plantes.
 Grâce aux images fournies par l'utilisateur, le système propose un diagnostic ainsi que des recommandations adaptées.
 
-La \autoref{figure: Décomposition modulaire du système} représente la décomposition modulaire du système.
+La \autoref{fig:Dcomposmodsys} représente la décomposition modulaire du système.
 
 
 \begin{figure}[h]       % "h" = ici, essaye de garder l'image à cet endroit
     \centering          % centre l'image
-    \includegraphics[width=0.8\textwidth]{./images/modules.drawio.png}  
-    \label{figure: Décomposition modulaire du système} 
+    \includegraphics[width=0.9\textwidth]{./images/modules.drawio.png}  
     \caption{Décomposition modulaire du système}  % label pour faire référence dans le texte
+    \label{fig:Dcomposmodsys} 
 \end{figure}
 \FloatBarrier
 
@@ -56,13 +56,13 @@ Client, Vendeur et Administrateur héritent de la classe Utilisateur.
 \item Un utilisateur possède un seul rôle dans le système.
 \end{itemize}
 
-La \autoref{fig:modgestusers} représente la composition du module de gestion des utilisateurs.
+La \autoref{modgestusers} représente la composition du module de gestion des utilisateurs.
 
 \begin{figure}[h]       % "h" = ici, essaye de garder l'image à cet endroit
     \centering          % centre l'image
     \includegraphics[width=0.7\textwidth]{./image/gestionUtilisateur.png}  
-    \label{fig:modgestusers}   % label pour faire référence dans le texte
     \caption{Composition du module Gestion des utilisateurs}
+    \label{modgestusers}   % label pour faire référence dans le texte
 \end{figure}
 \FloatBarrier
 
@@ -75,14 +75,14 @@ Vendeur, Administrateur et Plante.
 \item Un vendeur ainsi qu'un administrateur peut ajouter, modifier et supprimer aucune ou plusieurs plantes.
 \end{itemize}
 
-La \autoref{fig:modgestplantes} représente la composition du module de gestion des plantes.
+La \autoref{modgestplantes} représente la composition du module de gestion des plantes.
 
 
 \begin{figure}[h]       % "h" = ici, essaye de garder l'image à cet endroit
     \centering          % centre l'image
     \includegraphics[width=0.5\textwidth]{./image/gestionPlante.png}  
-    \label{fig:modgestplantes}   % label pour faire référence dans le texte
     \caption{Composition du module Gestion des plantes}
+    \label{modgestplantes}   % label pour faire référence dans le texte
 \end{figure}
 \FloatBarrier
 
@@ -98,18 +98,18 @@ Client, Commande, LigneCommande et Plante.
 \item Une ligne de commande correspond à une seule plante.
 \item Une plante peut appartenir à aucune ou plusieurs lignes de commande.
 \end{itemize}
-La \autoref{fig:modgestcmd} représente la composition du module de gestion des commandes.
+La \autoref{modgestcmd} représente la composition du module de gestion des commandes.
 
 \begin{figure}[h]       % "h" = ici, essaye de garder l'image à cet endroit
     \centering          % centre l'image
     \includegraphics[width=0.5\textwidth]{./image/gestionCommande.png}  
-    \label{fig:modgestcmd}   % label pour faire référence dans le texte
     \caption{Composition du module Gestion des commandes}
+    \label{modgestcmd}   % label pour faire référence dans le texte
 \end{figure}
 
 \FloatBarrier
 
-\subsubsection{Module de diagnostic intelligent}
+\subsubsection{Module de diagnostic intelligent et recommandation}
 Ce module contient quatre classes :
  Client, Diagnostic, ImagePlante et Recommandation AI.
 
@@ -119,24 +119,24 @@ Ce module contient quatre classes :
 \item Un diagnostic appartient à un seul client.
 \item Une recommandation peut être associée à un ou plusieurs diagnostics.
 \end{itemize}
-La \autoref{fig:modgestdiag} représente la composition du module de diagnostic intelligent et recommandation.
+La \autoref{modgestdiag} représente la composition du module de diagnostic intelligent et recommandation.
 
 \begin{figure}[h]       % "h" = ici, essaye de garder l'image à cet endroit
     \centering          % centre l'image
-    \includegraphics[width=0.7\textwidth]{./images/modulediag.drawio.png}  
-    \label{fig:modgestdiag}   % label pour faire référence dans le texte
-    \caption{Composition du module Diagnostic intelligent}
+    \includegraphics[width=0.8\textwidth]{./images/modulediag.drawio.png}  
+    \caption{Composition du module Diagnostic intelligent}   
+    \label{modgestdiag}   % label pour faire référence dans le texte
 \end{figure}
 \FloatBarrier
 
 \subsection{Étude des classes}
-La \autoref{fig:class} illustre le diagramme de classes do notre système.
+La \autoref{class} illustre le diagramme de classes do notre système.
 
 \begin{figure}[h]       % "h" = ici, essaye de garder l'image à cet endroit
     \centering          % centre l'image
-    \includegraphics[width=0.8\textwidth]{./images/DiagClassePFA2.drawio.png}  
-    \label{fig:class}   % label pour faire référence dans le texte
+    \includegraphics[width=1\textwidth]{./images/classes.drawio.png}  
     \caption{Diagramme de classes}
+    \label{class}   % label pour faire référence dans le texte
 \end{figure}
 \FloatBarrier
 
@@ -146,26 +146,26 @@ commencerons par la classe utilisateur.
 \FloatBarrier
 \subsubsection{Classe Utilisateur}
 
-La classe utilisateur est défini par numéro de carte d'identité «cin», un nom « nom », prenom « prénom », date de naissance « dateDeNaissance » , email « email » , mot de passe « motDePasse », statut du compte « statutCompte », numéro de téléphone de l'utilisateur « numeroTelephone » et date de création du compte « dateCréation ».
+La classe utilisateur est définie par numéro de carte d'identité «cin», un nom « nom », prenom « prénom », date de naissance « dateDeNaissance » , email « email » , mot de passe « motDePasse », statut du compte « statutCompte », numéro de téléphone de l'utilisateur « numeroTelephone » et date de création du compte « dateCréation ».
 
-La \autoref{fig:user} représente la classe utilisateur.
+La \autoref{user} représente la classe utilisateur.
 
 
 \begin{figure}[h]       % "h" = ici, essaye de garder l'image à cet endroit
     \centering          % centre l'image
-    \includegraphics[width=0.3\textwidth]{./image/classeUtilisateur.png}  
-    \label{fig:user}   % label pour faire référence dans le texte
+    \includegraphics[width=0.3\textwidth]{./images/user.drawio.png}  
     \caption{classe Utilisateur}
+    \label{user}   % label pour faire référence dans le texte
 \end{figure}
 \FloatBarrier
 
 
-Le \autoref{tab:tabuser} représente les opérations de la classe Utilisateur.
+Le \autoref{tabuser} représente les opérations de la classe Utilisateur.
 
 \begin{table}[h]
 \centering
-\label{tab:tabuser}  
 \caption{Opérations de la classe Utilisateur}  
+\label{tabuser}  
 \begin{tabular}{|m{5cm}|m{8cm}|}
 \hline
 \textbf{Opération} & \textbf{Description} \\
@@ -173,8 +173,6 @@ Le \autoref{tab:tabuser} représente les opérations de la classe Utilisateur.
 Se connecter() & Se connecter à l'application \\
 \hline
 Se déconnecter() & Se déconnecter de l'application \\
-\hline
-modifierProfil() & Modifier le profil de l'utilisateur \\
 \hline
 \end{tabular}
 \end{table}
@@ -184,14 +182,14 @@ modifierProfil() & Modifier le profil de l'utilisateur \\
 La classe Client hérite de la classe et représente l'utilisateur qui peut acheter des plantes et demander des diagnostics.
 Elle est définie par une adresse « adresse ».
 
-La \autoref{fig:client} représente la classe client.
+La \autoref{client} représente la classe client.
 
 
 \begin{figure}[h]       % "h" = ici, essaye de garder l'image à cet endroit
     \centering          % centre l'image
     \includegraphics[width=0.3\textwidth]{./image/classeClient.png}  
-    \label{fig:client}   % label pour faire référence dans le texte
     \caption{classe Client}
+    \label{client}   % label pour faire référence dans le texte
 \end{figure}
 
 \FloatBarrier
@@ -199,52 +197,40 @@ La \autoref{fig:client} représente la classe client.
 \subsubsection{Classe Vendeur}
 La classe Vendeur hérite de Utilisateur et représente l'utilisateur responsable de la gestion des plantes et des commandes.
 
-La \autoref{fig:vendeur} représente la classe vendeur.
+La \autoref{vendeur} représente la classe vendeur.
 
 \begin{figure}[h]       % "h" = ici, essaye de garder l'image à cet endroit
     \centering          % centre l'image
     \includegraphics[width=0.3\textwidth]{./image/classeVendeur.png}  
-    \label{fig:vendeur}   % label pour faire référence dans le texte
     \caption{classe Vendeur}
+    \label{vendeur}   % label pour faire référence dans le texte
 \end{figure}
 \FloatBarrier
 
 
-\FloatBarrier
-\subsubsection{Classe Administrateur}
-La classe Administrateur hérite de Utilisateur et permet la gestion globale du système.
-
-La \autoref{fig:admin} représente la classe administrateur.
-
-\begin{figure}[h]       % "h" = ici, essaye de garder l'image à cet endroit
-    \centering          % centre l'image
-    \includegraphics[width=0.3\textwidth]{./image/classeAdmin.png}  
-    \label{fig:admin}   % label pour faire référence dans le texte
-    \caption{classe Administrateur}
-\end{figure}
 \FloatBarrier
 
 \subsubsection{Classe Plante}
 
 La classe Plante est définie par identifiant plante « idPlante », nom scientifique « nomScientifique », type de plante « typePlante », description de la plante « description », quantité disponible en stock « quantitéStock », besoin de la plante en eau « besoinEau », besoin en Lumiere de la plante « besoinLumière », sa température optimale « tempOptimale », la saison de plantation « saisonPlantation », l'image de la plante « urlPlante » et l'état de la plante «etatPlante ».
 
-La \autoref{fig:plnt} représente la classe plante.
+La \autoref{plnt} représente la classe plante.
 
 
 \begin{figure}[h]       % "h" = ici, essaye de garder l'image à cet endroit
     \centering          % centre l'image
-    \includegraphics[width=0.3\textwidth]{./image/classePlante.png}  
-    \label{fig:plnt}   % label pour faire référence dans le texte
+    \includegraphics[width=0.32\textwidth]{./image/classePlante.png}  
     \caption{classe Plante}
+    \label{plnt}   % label pour faire référence dans le texte
 \end{figure}
 \FloatBarrier
 
-Le \autoref{tab:plante} présente les opérations de la classe Plante.
+Le \autoref{plante} présente les opérations de la classe Plante.
 
 \begin{table}[h]
 \centering
-\label{tab:plante}
 \caption{Opérations de la classe Plante}
+\label{plante}
 \begin{tabular}{|m{5cm}|m{8cm}|}
 \hline
 \textbf{Opération} & \textbf{Description} \\
@@ -265,27 +251,41 @@ modifierStock() & Modifier la quantité en stock \\
 \end{table}
 
 
-\FloatBarrier
-\subsubsection{Classe ImagePlante}
-La classe ImagePlante est définie par un nom de fichier « nomFichier », un type de fichier «typeFichier » et un url de fichier « urlFichier ».
+\subsubsection{Classe Administrateur}
+La classe Administrateur hérite de Utilisateur et permet la gestion globale du système.
 
-La \autoref{fig:imgpplnt} représente la classe plante.
+La \autoref{admin} représente la classe administrateur.
 
 \begin{figure}[h]       % "h" = ici, essaye de garder l'image à cet endroit
     \centering          % centre l'image
-    \includegraphics[width=0.3\textwidth]{./image/classeImagePlante.png}  
-    \label{fig:imgpplnt}   % label pour faire référence dans le texte
-    \caption{classe ImagePlante}
+    \includegraphics[width=0.3\textwidth]{./image/classeAdmin.png}  
+    \caption{classe Administrateur}
+    \label{admin}   % label pour faire référence dans le texte
 \end{figure}
 \FloatBarrier
 
 
-Le \autoref{tab:imageplante} présente les opérations de la classe ImagePlante.
+
+\subsubsection{Classe ImagePlante}
+La classe ImagePlante est définie par un nom de fichier « nomFichier », un type de fichier «typeFichier » et un url de fichier « urlFichier ».
+
+La \autoref{imgpplnt} représente la classe plante.
+
+\begin{figure}[h]       % "h" = ici, essaye de garder l'image à cet endroit
+    \centering          % centre l'image
+    \includegraphics[width=0.3\textwidth]{./image/classeImagePlante.png}  
+    \caption{classe ImagePlante}
+    \label{imgpplnt}   % label pour faire référence dans le texte
+\end{figure}
+\FloatBarrier
+
+
+Le \autoref{imageplante} présente les opérations de la classe ImagePlante.
 
 \begin{table}[h]
 \centering
 \caption{Opérations de la classe ImagePlante}
-\label{tab:imageplante}
+\label{imageplante}
 \begin{tabular}{|m{5cm}|m{8cm}|}
 \hline
 \textbf{Opération} & \textbf{Description} \\
@@ -302,23 +302,23 @@ supprimerImage() & Supprimer une image \\
 \subsubsection{Classe Commande}
 La classe commande est définie par une date de commande « dateCommande » , statut de la commande « statutCommande », adresse de livraison « adresseLivraison » et le numéro de commande « numeroCommande »
 
-La \autoref{fig:cmd} représente la classe commande.
+La \autoref{cmd} représente la classe commande.
 
 \begin{figure}[h]       % "h" = ici, essaye de garder l'image à cet endroit
     \centering          % centre l'image
     \includegraphics[width=0.4\textwidth]{./images/cmd.drawio.png}  
-    \label{fig:cmd}   % label pour faire référence dans le texte
     \caption{classe Commande}
+    \label{cmd}   % label pour faire référence dans le texte
 \end{figure}
 \FloatBarrier
 
 
-Le \autoref{tab:commande} présente les opérations de la classe Commande.
+Le \autoref{commande} présente les opérations de la classe Commande.
 
 \begin{table}[h]
 \centering
 \caption{Opérations de la classe Commande}
-\label{tab:commande}
+\label{commande}
 \begin{tabular}{|m{5cm}|m{8cm}|}
 \hline
 \textbf{Opération} & \textbf{Description} \\
@@ -337,13 +337,13 @@ calculerMontantTotal() & Calculer le montant total \\
 \subsubsection{Classe LigneCommande}
 La classe Ligne de commande est défini par une quantité <<quantité>>
 
-La \autoref{fig:lgncmd} représente la classe ligne de commande.
+La \autoref{lgncmd} représente la classe ligne de commande.
 
 \begin{figure}[h]       % "h" = ici, essaye de garder l'image à cet endroit
     \centering          % centre l'image
     \includegraphics[width=0.3\textwidth]{./image/classeLigneDeCommande.png}  
-    \label{fig:lgncmd}   % label pour faire référence dans le texte
     \caption{classe Ligne de commande}
+    \label{lgncmd}   % label pour faire référence dans le texte
 \end{figure}
 \FloatBarrier
 
@@ -369,22 +369,22 @@ calculerMontant() & Calculer le montant \\
 La classe « Diagnostic » représente le résultat de l'analyse intelligente.
 Elle est définie par une description « description » et une date «datediagnostic ».
 
-La \autoref{fig:diag} représente la classe diagnostic.
+La \autoref{diag} représente la classe diagnostic.
 
 \begin{figure}[h]       % "h" = ici, essaye de garder l'image à cet endroit
     \centering          % centre l'image
     \includegraphics[width=0.3\textwidth]{./images/diag.drawio.png}  
-    \label{fig:diag}   % label pour faire référence dans le texte
     \caption{figure: classe Diagnostic}
+    \label{diag}   % label pour faire référence dans le texte
 \end{figure}
 \FloatBarrier
 
-Le \autoref{tab:diagnostic} présente les opérations de la classe Diagnostic.
+Le \autoref{diagnostic} présente les opérations de la classe Diagnostic.
 
 \begin{table}[h]
 \centering
 \caption{Opérations de la classe Diagnostic}
-\label{tab:diagnostic}
+\label{diagnostic}
 \begin{tabular}{|m{5cm}|m{8cm}|}
 \hline
 \textbf{Opération} & \textbf{Description} \\
@@ -399,22 +399,22 @@ genererDiagnostic() & Analyser l'image et générer le diagnostic \\
 La classe « Recommandation AI » représente les solutions proposées.
 Elle est définie par une description « description » ainsi qu'une date « dateRecommandation ».
 
-La \autoref{fig:rec} représente la classe recommandation AI.
+La \autoref{rec} représente la classe recommandation AI.
 
 \begin{figure}[h]       % "h" = ici, essaye de garder l'image à cet endroit
     \centering          % centre l'image
     \includegraphics[width=0.3\textwidth]{./image/classeRecommandation.png}  
-    \label{fig:rec}   % label pour faire référence dans le texte
     \caption{classe Recommandation AI}
+    \label{rec}   % label pour faire référence dans le texte
 \end{figure}
 \FloatBarrier
 
-Le \autoref{tab:recommandation} présente les opérations de la classe Recommandation AI.
+Le \autoref{recommandation} présente les opérations de la classe Recommandation AI.
 
 \begin{table}[h]
 \centering
-\label{tab:recommandation}  
 \caption{Opérations de la classe Recommandation AI}
+\label{recommandation}  
 \begin{tabular}{|m{5cm}|m{8cm}|}
 \hline
 \textbf{Opération} & \textbf{Description} \\
@@ -430,21 +430,28 @@ proposerRecommandations() & Générer les recommandations \\
 \section{Description du fonctionnement du diagnostic et recommandation}
 
 Après avoir détaillé les méthodes des différentes classes dans l'étude dynamique, nous présentons dans cette section un exemple de scénario intitulé « Diagnostic et recommandation ».
+
 Dans ce scénario, l'utilisateur (client) souhaite obtenir un diagnostic concernant l'état de sa plante à partir d'une image fournie via l'application, ainsi que des recommandations adaptées en fonction du diagnostic établi.
+
 Dans le scénario nominal, le client charge une image de la plante à analyser. Le système transmet ensuite cette image au module de diagnostic intelligent.
+
 Le modèle d'intelligence artificielle intégré à la plateforme (modèle de diagnostic) analyse l'image et génère un diagnostic décrivant le problème détecté (maladie, carence, stress hydrique, etc.).
+
 Dans le cas normal, le système enregistre le diagnostic retourné par le modèle puis le transmet au modèle de recommandation, qui analyse les résultats obtenus et propose des recommandations adaptées, telles que : traitement recommandé, modification des conditions d'arrosage, exposition à la lumière ou utilisation d'un produit spécifique.
+
 Ces recommandations sont ensuite retournées au système, qui les enregistre et les affiche à l'utilisateur afin de l'aider à prendre les actions nécessaires pour améliorer l'état de sa plante.
+
 Dans le scénario d'erreur, si l'image fournie est invalide ou corrompue, le système affiche un message indiquant que le diagnostic n'a pas pu être effectué.
+
 Le résultat affiché par la plateforme sera alors : « Diagnostic indisponible ».
 
-La \autoref{fig:seq} représente le diagramme de sequence du cas d'utilisation : Effectuer diagnostic.
+La \autoref{seq} représente le diagramme de sequence du cas d'utilisation : Effectuer diagnostic.
 
 \begin{figure}[h]       % "h" = ici, essaye de garder l'image à cet endroit
     \centering          % centre l'image
-    \includegraphics[width=1\textwidth]{./image/diagSequenceAI.png}  
-    \label{fig:seq}   % label pour faire référence dans le texte
+    \includegraphics[width=1.1\textwidth]{./image/diagSequenceAI.png}  
     \caption{Diagramme de sequence effectuer diagnostic }
+    \label{seq}   % label pour faire référence dans le texte
 \end{figure}
 
 \FloatBarrier

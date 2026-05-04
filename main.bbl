@@ -35,6 +35,18 @@ Le rôle des plantes. Consulté le 4 Avril 2026. [Online]. Available:
   \url{https://www.nature-en-ville.com/sinspirer/planter-transmettre-proteger-le-role-dune-pepiniere-communale-la-possession-la-reunion}
 \BIBentrySTDinterwordspacing
 
+\bibitem[Bloomscape(2025)]{BloomscapeRef}
+\BIBentryALTinterwordspacing
+Bloomscape. (2025) Bloomscape official shop. Consulté le 1 Février 2026.
+  [Online]. Available: \url{https://bloomscape.com/shop}
+\BIBentrySTDinterwordspacing
+
+\bibitem[Blo()]{BloomscapeRef1}
+\BIBentryALTinterwordspacing
+Qu’est ce que la méthodologie crisp-dm? Consulté le 4 Avril 2026. [Online].
+  Available: \url{https://www.le1817.com/blog/la-methodologie-crisp-dm}
+\BIBentrySTDinterwordspacing
+
 \bibitem[Ltd.(2025)]{pictureThisRef}
 \BIBentryALTinterwordspacing
 G.~G.~G. Ltd. (2025) Picturethis - plant identifier. Consulté le 1 Février
@@ -55,18 +67,6 @@ Page d'accueil pl@ntnet. Consulté le 1 Février 2026. [Online]. Available:
   \url{https://plantnet.org/en/}
 \BIBentrySTDinterwordspacing
 
-\bibitem[Bloomscape(2025)]{BloomscapeRef}
-\BIBentryALTinterwordspacing
-Bloomscape. (2025) Bloomscape official shop. Consulté le 1 Février 2026.
-  [Online]. Available: \url{https://bloomscape.com/shop}
-\BIBentrySTDinterwordspacing
-
-\bibitem[Blo()]{BloomscapeRef1}
-\BIBentryALTinterwordspacing
-Qu’est ce que la méthodologie crisp-dm? Consulté le 4 Avril 2026. [Online].
-  Available: \url{https://www.le1817.com/blog/la-methodologie-crisp-dm}
-\BIBentrySTDinterwordspacing
-
 \bibitem[GeeksforGeeks(2024)]{vModelRef}
 \BIBentryALTinterwordspacing
 GeeksforGeeks. (2024) V-model in software engineering. Consulté le 9 avril
@@ -74,18 +74,18 @@ GeeksforGeeks. (2024) V-model in software engineering. Consulté le 9 avril
   \url{https://www.geeksforgeeks.org/software-engineering-v-model/}
 \BIBentrySTDinterwordspacing
 
-\bibitem[IBM(2024)]{crispdmRef}
-\BIBentryALTinterwordspacing
-IBM. (2024) Crisp-dm (cross industry standard process for data mining).
-  Consulté le 9 avril 2026. [Online]. Available:
-  \url{https://www.ibm.com/topics/crisp-dm}
-\BIBentrySTDinterwordspacing
-
 \bibitem[Lardilleux(2023)]{cycleV}
 \BIBentryALTinterwordspacing
 R.~Lardilleux. (2023) Cycle en v en gestion de projet : définition et
   méthode. Consulté le 9 avril 2026. [Online]. Available:
   \url{https://www.manager-go.com/gestion-de-projet/cycle-en-v.htm}
+\BIBentrySTDinterwordspacing
+
+\bibitem[IBM(2024)]{crispdmRef}
+\BIBentryALTinterwordspacing
+IBM. (2024) Crisp-dm (cross industry standard process for data mining).
+  Consulté le 9 avril 2026. [Online]. Available:
+  \url{https://www.ibm.com/topics/crisp-dm}
 \BIBentrySTDinterwordspacing
 
 \bibitem[Bergmann()]{refAnalyse}

@@ -8,7 +8,7 @@ Dans le cadre de notre projet, cette étape est primordiale dans le processus de
 
 L'apprentissage automatique est un ensemble de techniques permettant à un système informatique d'apprendre à partir de données afin de réaliser des prédictions ou de prendre des décisions sans être explicitement programmé. Dans notre projet, il est utilisé pour identifier les maladies des plantes.
 
-On distingue principalement trois types d'apprentissage automatique : supervisé, non supervisé et par renforcement, chacun étant adapté à des types de problèmes différents selon la disponibilité des données et les objectifs.
+Nous distinguons principalement trois types d'apprentissage automatique : supervisé, non supervisé et par renforcement, chacun étant adapté à des types de problèmes différents selon la disponibilité des données et les objectifs.
 
 L'apprentissage supervisé repose sur des données étiquetées, où chaque entrée est associée à une sortie connue. Le modèle apprend ainsi à prédire correctement les résultats pour de nouvelles données. Ce type d'apprentissage est particulièrement adapté aux problèmes de diagnostic.
 
@@ -87,7 +87,7 @@ Afin d’adapter EfficientNetB4 à notre problème spécifique, nous procédons 
 Une fois le modèle construit et entraîné, nous passons à la phase d’évaluation afin de mesurer ses performances.
 Les performances du modèle proposé basé sur EfficientNetB4 ont été évaluées à l’aide des métriques d’accuracy et de loss sur les ensembles d’entraînement et de validation. Comme illustré dans la \autoref{fig:eval} , le modèle atteint une précision élevée et stable, avoisinant 97 \% sur l’ensemble d’entraînement et entre 95 \% et 98 \% sur l’ensemble de validation après la phase de fine-tuning.
 
-Les courbes de perte montrent une diminution progressive au fil des époques, ce qui indique que le modèle apprend correctement les caractéristiques pertinentes du dataset. Après le début de la phase de fine-tuning, on observe de légères fluctuations au niveau de l’accuracy et de la loss, mais le modèle se stabilise rapidement et continue à s’améliorer.
+Les courbes de perte montrent une diminution progressive au fil des époques, ce qui indique que le modèle apprend correctement les caractéristiques pertinentes du dataset. Après le début de la phase de fine-tuning, nous observons de légères fluctuations au niveau de l’accuracy et de la loss, mais le modèle se stabilise rapidement et continue à s’améliorer.
 
 Dans l’ensemble, ces résultats montrent que le modèle généralise bien sur des données non vues et ne présente pas de surapprentissage significatif, ce qui confirme l’efficacité de l’approche par transfert d’apprentissage basée sur EfficientNetB4 pour la classification des maladies des plantes.
 
