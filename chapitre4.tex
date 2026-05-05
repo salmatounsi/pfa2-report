@@ -2,7 +2,7 @@
 
 \section*{Introduction}
 Ce chapitre détaille le processus de construction du modèle d'apprentissage automatique dédié à l'identification des maladies des plantes. L'approche adoptée repose sur l'apprentissage supervisé , et plus précisément sur des techniques de classification multiclasse, afin de diagnostiquer avec précision les pathologies à partir d'images. En suivant la méthodologie standard CRISP-DM , nous présenterons les différentes étapes du workflow, allant de l'extraction et la préparation des données jusqu'au développement et à l'évaluation d'un modèle basé sur l'architecture EfficientNetB4.
-\section{Analyse des problème}
+\section{Analyse de problème}
 
 Dans le cadre de notre projet, cette étape est primordiale dans le processus de développement du modèle d'apprentissage automatique. Elle permet de comprendre la nature du problème, les données disponibles ainsi que les contraintes du système.
 
@@ -18,22 +18,52 @@ L'apprentissage par renforcement est basé sur l'interaction avec un environneme
 
 Le diagnostic des maladies des plantes relève de l'apprentissage supervisé, car il nécessite des données annotées reliant des symptômes ou des images à des maladies spécifiques.
 
-Les méthodes d'apprentissage supervisé se divisent en deux grandes catégories : la régression et la classification. La régression est utilisée pour prédire des valeurs continues telles que la température ou le prix d'un produit, tandis que la classification permet de prédire des catégories.
+Les méthodes d'apprentissage supervisé se divisent en deux grandes catégories : 
+\begin{itemize}[label=\textbullet, leftmargin=*, itemsep=0.5em]
+    \item \textbf{La régression :} il s'agit d'un type de machine learning supervisé 
+    dont l'objectif est de prédire des valeurs continues, telles que la température, 
+    le prix d'un produit ou encore le volume de ventes de ce dernier.
+    
+    \item \textbf{La classification :} contrairement à la régression, elle vise à 
+    prédire des variables discrètes, comme la présence ou l'absence d'une maladie, 
+    l'appartenance d'un individu à une catégorie particulière, ou encore la 
+    classification automatique d'un texte selon son contenu.
+\end{itemize}
 
 Dans notre projet, le diagnostic correspond à un problème de classification, car il s'agit d'assigner une plante à une maladie spécifique.
 
-La classification peut être binaire, multiclasse ou hiérarchique. La classification binaire distingue deux classes, la classification multiclasse permet de choisir parmi plusieurs catégories, et la classification hiérarchique organise les classes selon différents niveaux.
+La classification peut être binaire, multiclasse ou hiérarchique :
+\begin{itemize}[label=\textbullet, leftmargin=*, itemsep=0.5em]
+    \item \textbf{La classification binaire :} elle consiste à attribuer une observation 
+    à l'une des deux catégories possibles. Par exemple, déterminer si une transaction 
+    donnée est frauduleuse ou non.
+
+    \item \textbf{La classification multiclasse :} elle étend le principe de la 
+    classification binaire en permettant d'affecter une observation à l'une de 
+    plusieurs catégories possibles, comme la classification de textes selon leur contenu.
+
+    \item \textbf{La classification hiérarchique :} elle permet d'organiser les 
+    observations selon plusieurs niveaux hiérarchiques imbriqués, à l'instar de 
+    la classification des espèces animales en fonction de leur genre et de leur espèce.
+\end{itemize}
 
 Dans notre cas, le diagnostic est un problème de classification multiclasse, puisque plusieurs maladies peuvent être identifiées à partir des symptômes ou des images observées.
-Ainsi, l'approche adoptée repose principalement sur des techniques de classification supervisée afin d'assurer un diagnostic précis.\cite{refAnalyse}
+Ainsi, l'approche adoptée repose principalement sur des techniques de classification supervisée afin d'assurer un diagnostic précis\cite{refAnalyse}.
 \section{Workflow global}
 Afin de développer le modèle de diagnostic, nous avons suivi la démarche standard de construction de modèles de l'apprentissage automatique représentée par la méthode CRISP-DM.
 
 Tout d'abord, nous entamons le processus par l'extraction et la compréhention des données.
 Ensuite, nous procédons à la préparation de données par l'élimination de toute
-données non nécessaire ou incomplète et par leur normalisation.
+donnée non nécessaire ou incomplète et par leur normalisation.
 Une fois ces étapes réalisées, nous passons au développement du modèle, suivi de son entraînement, de son évaluation et de sa validation.
 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/diag_crispdm.png}
+    \caption{Démarche standard de construction d'un modèle d'apprentissage automatique}
+    \label{fig:crisp_dm}
+\end{figure}
 
 \section{Diagnostic de maladies de plantes}
 Dans le cadre du diagnostic des maladies des plantes, les données jouent un rôle essentiel en permettant d'identifier avec précision les pathologies végétales et de proposer des solutions de traitement adaptées et efficaces.
@@ -80,16 +110,79 @@ La phase de modélisation consiste à concevoir et à mettre en œuvre une appro
 \subsubsection{Approche utilisée : Transfer Learning}
 Dans ce travail, nous adoptons une approche basée sur le transfert d’apprentissage (Transfer Learning),qui consiste à exploiter un modèle de réseau de neurones convolutionnel préentraîné sur une large base de données, puis à l’adapter à notre problème spécifique de classification des maladies des plantes. \cite{transferlearnin}
 \subsubsection{Architecture du modèle : EfficientNetB4}
-Nous utilisons le modèle EfficientNetB4, une architecture de réseau de neurones convolutionnel reconnue pour son équilibre entre performance et efficacité computationnelle. Ce modèle préentraîné permet d’extraire des caractéristiques pertinentes des images tout en réduisant le temps d’entraînement et les besoins en données. \cite{EfficientNetB4}
+Nous utilisons le modèle EfficientNetB4, une architecture de réseau de neurones convolutionnel reconnue par ses performances reconnues dans 
+les tâches de classification d'images. En effet, cette architecture repose 
+sur une mise à l'échelle composite qui optimise 
+simultanément la profondeur, la largeur et la résolution du réseau, lui 
+conférant une grande capacité d'extraction de caractéristiques visuelles 
+fines. De plus, ayant été préentraîné sur ImageNet, EfficientNetB4 dispose 
+déjà de représentations riches et généralisables, ce qui le rend 
+particulièrement adapté à la détection de symptômes visuels tels que les 
+taches, les décolorations et les lésions foliaires caractéristiques des 
+maladies des plantes. \cite{EfficientNetB4}
 \subsubsection{Fine-tuning du modèle}
-Afin d’adapter EfficientNetB4 à notre problème spécifique, nous procédons à une étape de fine-tuning.Cette étape consiste à réentraîner certaines couches du modèle sur notre dataset de maladies des plantes, tout en conservant les poids appris lors de l’entraînement initial. Des couches de classification sont ajoutées à la sortie du modèle afin de produire les prédictions finales. 
+Afin d'adapter EfficientNetB4 à notre problème spécifique, nous procédons 
+à une étape de fine-tuning, qui consiste à réentraîner certaines couches 
+profondes du modèle sur notre dataset de maladies des plantes, tout en 
+conservant les poids appris lors du préentraînement. Cette approche se 
+justifie par la différence de domaine entre ImageNet, composé d'images 
+génériques, et notre dataset, constitué exclusivement d'images de feuilles 
+de plantes présentant des pathologies précises. Elle permet ainsi au modèle 
+d'adapter ses représentations aux caractéristiques spécifiques des maladies 
+végétales, telles que les taches, les décolorations et les lésions foliaires, 
+tout en bénéficiant des features bas-niveau déjà appris. Des couches de 
+classification sont ajoutées à la sortie du modèle afin de produire les 
+prédictions finales.
 \subsection{Evaluation}
 Une fois le modèle construit et entraîné, nous passons à la phase d’évaluation afin de mesurer ses performances.
-Les performances du modèle proposé basé sur EfficientNetB4 ont été évaluées à l’aide des métriques d’accuracy et de loss sur les ensembles d’entraînement et de validation. Comme illustré dans la \autoref{fig:eval} , le modèle atteint une précision élevée et stable, avoisinant 97 \% sur l’ensemble d’entraînement et entre 95 \% et 98 \% sur l’ensemble de validation après la phase de fine-tuning.
+Les performances du modèle proposé basé sur EfficientNetB4 ont été évaluées à l’aide des métriques d’accuracy et de loss sur les ensembles d’entraînement et de validation.
 
-Les courbes de perte montrent une diminution progressive au fil des époques, ce qui indique que le modèle apprend correctement les caractéristiques pertinentes du dataset. Après le début de la phase de fine-tuning, nous observons de légères fluctuations au niveau de l’accuracy et de la loss, mais le modèle se stabilise rapidement et continue à s’améliorer.
+\textbf{L'accuracy} mesure la proportion de maladies correctement 
+identifiées parmi l'ensemble des images évaluées :
 
-Dans l’ensemble, ces résultats montrent que le modèle généralise bien sur des données non vues et ne présente pas de surapprentissage significatif, ce qui confirme l’efficacité de l’approche par transfert d’apprentissage basée sur EfficientNetB4 pour la classification des maladies des plantes.
+\begin{equation*}
+    \text{Accuracy} = \frac{1}{N}\sum_{i=1}^{N} 
+    \mathbf{1}[\hat{y}_i = y_i]
+\end{equation*}
+
+où :
+\begin{itemize}
+    \item $N$ est le nombre total d'images évaluées,
+    \item $y_i$ est l'étiquette réelle de l'image $i$, représentant 
+    la maladie effective de la plante,
+    \item $\hat{y}_i$ est la classe prédite par le modèle pour 
+    l'image $i$,
+    \item $\mathbf{1}[\hat{y}_i = y_i]$ est la fonction indicatrice, 
+    qui vaut $1$ si la prédiction est correcte et $0$ sinon.
+\end{itemize}
+
+\textbf{La fonction de perte} utilisée est la 
+\textit{Sparse Categorical Cross-Entropy}. Elle quantifie l'écart 
+entre la distribution de probabilités prédite par le modèle et 
+l'étiquette réelle de chaque image :
+
+\begin{equation*}
+    \mathcal{L} = -\frac{1}{N}\sum_{i=1}^{N} 
+    \log(\hat{y}_{i, y_i})
+\end{equation*}
+
+où :
+\begin{itemize}
+    \item $N$ est le nombre total d'images,
+    \item $y_i$ est l'étiquette entière réelle de l'image $i$, 
+    correspondant à l'indice de la maladie dans notre dataset 
+    (par exemple, $y_i = 3$ pour la troisième maladie),
+    \item $\hat{y}_{i, y_i}$ est la probabilité que le modèle 
+    assigne à la classe correcte $y_i$ pour l'image $i$. Plus 
+    cette probabilité est élevée, plus la perte est faible,
+    \item Le signe $-$ garantit que minimiser $\mathcal{L}$ revient 
+    à maximiser la probabilité assignée à la bonne classe.
+\end{itemize}
+
+Ainsi, plus le modèle est confiant et correct dans ses prédictions, 
+plus la loss tend vers $0$. À l'inverse, une prédiction incorrecte 
+ou incertaine engendre une perte élevée, pénalisant le modèle lors 
+de la rétropropagation.
 
 \begin{figure} 
 \centering
@@ -98,6 +191,44 @@ Dans l’ensemble, ces résultats montrent que le modèle généralise bien sur 
 \caption{ Evaluation des résultats de l'entrainement du model de diagnostic.}
 \label{fig:eval}
 \end{figure}
+
+
+
+Comme illustré par la \autoref{fig:eval}, l'analyse des courbes d'accuracy 
+et de loss permet de tirer plusieurs conclusions sur le comportement du 
+modèle au cours de l'entraînement.
+
+Durant la phase initiale, on observe une progression rapide et régulière 
+de l'accuracy sur les deux ensembles, accompagnée d'une diminution continue 
+de la loss. Cela traduit une bonne capacité du modèle à apprendre les 
+caractéristiques visuelles distinctives des différentes maladies des plantes,
+telles que les taches, les décolorations et les lésions foliaires. Cette 
+progression régulière confirme également que les poids issus du 
+préentraînement sur ImageNet constituent un bon point de départ pour 
+notre tâche de classification.
+
+Au déclenchement de la phase de fine-tuning, de légères fluctuations 
+apparaissent sur les courbes d'accuracy et de loss. Ces variations sont 
+tout à fait attendues et s'expliquent par deux facteurs principaux. 
+D'une part, le dégel des couches profondes du modèle entraîne une 
+réadaptation temporaire des poids, qui se réajustent progressivement 
+aux spécificités de notre dataset. D'autre part, le déséquilibre entre 
+les classes du dataset, certaines maladies étant nettement plus 
+représentées que d'autres, peut accentuer ces instabilités ponctuelles 
+en introduisant un biais dans les mises à jour des poids.
+
+Néanmoins, le modèle se stabilise rapidement après cette phase de 
+transition et continue de s'améliorer. Il atteint une accuracy avoisinant 
+\textbf{97\%} sur l'ensemble d'entraînement et entre \textbf{95\% et 98\%} 
+sur l'ensemble de validation. Le faible écart observé entre les performances 
+sur ces deux ensembles est un indicateur important : il confirme que le 
+modèle ne se contente pas de mémoriser les images d'entraînement, mais 
+qu'il apprend réellement à généraliser à des images de maladies non vues. 
+Cela témoigne de l'absence de surapprentissage significatif et confirme 
+l'efficacité de l'approche par transfert d'apprentissage basée sur 
+EfficientNetB4 pour le diagnostic des maladies des plantes.
+
+
 
 \subsection*{Conclusion}
 Dans ce chapitre nous avons explicité la construction du modèle de diagnostic des maladies. 
