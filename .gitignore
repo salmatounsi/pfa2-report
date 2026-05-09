@@ -13,3 +13,6 @@
 *.log
 *.out
 *.synctex
+main.aux
+main.bbl
+main.syntex*

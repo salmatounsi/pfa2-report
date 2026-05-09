@@ -32,34 +32,36 @@ le \autoref{tab:env_materiel}.
 Pour mener à bien notre projet, nous avons utilisé divers logiciels à différentes étapes de sa
 réalisation, comme présenté dans le \autoref{tab:env_logiciel}.
 
-        \begin{table}[H]
-        \centering
-        \begin{tabular}{|p{3cm}|p{3cm}|p{8cm}|}
-        \hline
-        \textbf{Logiciel} & \textbf{Logo} & \textbf{Description} \\
-        \hline
-        IntelliJ IDEA & 
-        \includegraphics[width=2cm]{logos/intellij.jpg} & 
-        IntelliJ IDEA est un environnement de développement intégré (IDE) développé par JetBrains, reconnu pour ses fonctionnalités avancées d'analyse de code et de complétion intelligente. Il supporte de nombreux langages de programmation et frameworks, ce qui en fait un outil de choix pour le développement d'applications modernes \cite{intellij2011most}. \\
-        \hline
-        PyCharm & 
-        \includegraphics[width=2cm]{logos/pycharm.jpg} & 
-        PyCharm est un IDE spécialisé pour le développement Python, également développé par JetBrains. Il offre des fonctionnalités telles que le débogage, les tests unitaires, et l'intégration avec des frameworks web comme Django et Flask, facilitant ainsi le développement d'applications Python \cite{hu2018deepgraph}. \\
-        \hline
-        PostgreSQL & 
-        \includegraphics[width=2cm]{logos/postgresql.png} & 
-        PostgreSQL est un système de gestion de bases de données relationnelles-objet open source, reconnu pour sa robustesse, sa fiabilité et ses performances. Il supporte des fonctionnalités avancées telles que les transactions ACID, les index partiels et les types de données personnalisés, ce qui en fait l'un des SGBD les plus utilisés dans les applications d'entreprise \cite{postgresql1996postgresql}. \\
-        \hline
-        OpenAI API & 
-        \includegraphics[width=2cm]{logos/openai.png} & 
-        L'API OpenAI fournit un accès aux modèles de langage de grande taille (LLM) développés par OpenAI, notamment GPT-4. Elle permet aux développeurs d'intégrer des capacités d'intelligence artificielle avancées dans leurs applications, telles que la génération de texte, la compréhension du langage naturel et la résolution de problèmes complexes \cite{paredes2023chatgpt}. \\
-        \hline
-        \end{tabular}
-        \caption{Environnement logiciel}
-        \label{tab:env_logiciel}
-        \end{table}
-
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|m{3cm}|m{3cm}|m{8cm}|}
+    \hline
+    \textbf{Logiciel} & \textbf{Logo} & \textbf{Description} \\
+    \hline
+    IntelliJ IDEA & 
+    \includegraphics[width=2cm]{logos/intellij.jpg} & 
+    IntelliJ IDEA est un environnement de développement intégré (IDE) développé par JetBrains, reconnu pour ses fonctionnalités avancées d'analyse de code et de complétion intelligente. Il supporte de nombreux langages de programmation et frameworks, ce qui en fait un outil de choix pour le développement d'applications modernes \cite{intellij2011most}. \\
+    \hline
+    PyCharm & 
+    \includegraphics[width=2cm]{logos/pycharm.jpg} & 
+    PyCharm est un IDE spécialisé pour le développement Python, également développé par JetBrains. Il offre des fonctionnalités telles que le débogage, les tests unitaires, et l'intégration avec des frameworks web comme Django et Flask, facilitant ainsi le développement d'applications Python \cite{hu2018deepgraph}. \\
+    \hline
+    PostgreSQL & 
+    \includegraphics[width=2cm]{logos/postgresql.png} & 
+    PostgreSQL est un système de gestion de bases de données relationnelles-objet open source, reconnu pour sa robustesse, sa fiabilité et ses performances. Il supporte des fonctionnalités avancées telles que les transactions ACID, les index partiels et les types de données personnalisés, ce qui en fait l'un des SGBD les plus utilisés dans les applications d'entreprise \cite{postgresql1996postgresql}. \\
+    \hline
+    OpenAI API & 
+    \includegraphics[width=2cm]{logos/openai.png} & 
+    L'API OpenAI fournit un accès aux modèles de langage de grande taille (LLM) développés par OpenAI, notamment GPT-4. Elle permet aux développeurs d'intégrer des capacités d'intelligence artificielle avancées dans leurs applications, telles que la génération de texte, la compréhension du langage naturel et la résolution de problèmes complexes \cite{paredes2023chatgpt}. \\
+    \hline
+    \end{tabular}
+    \caption{Environnement logiciel}
+    \label{tab:env_logiciel}
+\end{table}
+  
 \section{Travail réalisé}
+Dans cette section, nous présentons l'architecture globale de la solution adoptée ainsi qu'un aperçu des principales interfaces de l'application mobile PhytoCare.
+\subsection{Architecture globale de la solution}
 La figure \ref{fig:arch} illustre l'architecture globale de notre solution, 
 ainsi que les technologies et langages de programmation utilisés. Notre architecture 
 suit un modèle \textbf{quatre-tiers}, organisé comme suit :
@@ -94,25 +96,47 @@ suit un modèle \textbf{quatre-tiers}, organisé comme suit :
     consultations et aux plantes médicinales.
 \end{itemize}
 
-    La \autoref{fig:arch} est une capture d'écran de Bloomscape.
-    \subsection{Architecture globale de la solution}
+
         \begin{figure}[H]
         \centering
-        \includegraphics[width=0.6\textheight]{images/bloomscape.png}
-        \caption{ Capture d'écran de la page accueil de BloomscapeRef1 \cite{BloomscapeRef1}.}
+        \includegraphics[width=0.7\textheight]{images/arch.png}
+        \caption{ Architecture globale de la solution.}
         \label{fig:arch}
         \end{figure}
 
     \subsection{Aperçu sur le travail réalisé}
 Dans cette partie, nous décrivons les différentes interfaces de notre plate-forme, PhytoCare
 
-        \subsubsection{La page de connexion (SignIn)}
-        ...
+        \subsubsection{La page de connexion}
 
-        \subsubsection{La page d'inscription (Sign Up)}
+    La \autoref{fig:con} est la page de connexion.
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.3\textheight]{images/login.png}
+        \caption{La page de connexion.}
+        \label{fig:con}
+        \end{figure}
+
+        \subsubsection{La page d'inscription}
         ...
         \subsubsection{La page d'accueil}
-        ...
+
+        La \autoref{fig:acc1} et la \autoref{fig:acc2} sont la page d'accueil.
+       
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.3\textheight]{images/pagedacc(2).png}
+        \caption{La page d'accueil (1).}
+        \label{fig:acc1}
+        \end{figure}        
+        
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.3\textheight]{images/pagedacc.png}
+        \caption{La page d'accueil (2).}
+        \label{fig:acc2}
+        \end{figure}  
+
         \subsubsection{La page panier}
         ...
 
