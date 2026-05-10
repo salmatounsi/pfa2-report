@@ -19,7 +19,7 @@
 \usepackage{enumitem}
 \usepackage{placeins}
 \usepackage{enumitem}
-
+\usepackage{etoolbox}
 \geometry{top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm}
 
 % Texte
@@ -78,6 +78,10 @@
 % Listes
 \setlist[itemize]{leftmargin=1.2cm}
 \setlist[enumerate]{leftmargin=1.2cm}
+
+% Réduction globale des tableaux
+\AtBeginEnvironment{tabular}{\footnotesize}
+\renewcommand{\arraystretch}{0.9}
 
 \begin{document}
 
