@@ -5,7 +5,7 @@
 *.out
 *.synctex.gz
 *.toc
-*.pdf
+ main.pdf
 *.bbl
 *.blggit 
 *.blg
