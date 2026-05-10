@@ -109,7 +109,7 @@ Après la phase de normalisation des données, le dataset est ensuite fractionn�
 \subsection{Modélisation}
 La phase de modélisation consiste à concevoir et à mettre en œuvre une approche d’apprentissage automatique adaptée à la classification des maladies des plantes à partir d’images.
 \subsubsection{Approche utilisée : Transfer Learning}
-Dans ce travail, nous adoptons une approche basée sur le transfert d’apprentissage (Transfer Learning),qui consiste à exploiter un modèle de réseau de neurones convolutionnel préentraîné sur une large base de données, puis à l’adapter à notre problème spécifique de classification des maladies des plantes. \cite{transferlearnin}
+Dans ce travail, nous adoptons une approche basée sur le transfert d’apprentissage (Transfer Learning),qui consiste à exploiter un modèle de réseau de neurones convolutionnel préentraîné sur une large base de données, puis à l’adapter à notre problème spécifique de classification des maladies des plantes \cite{transferlearnin}. 
 \subsubsection{Architecture du modèle : EfficientNetB4}
 Nous utilisons le modèle EfficientNetB4, une architecture de réseau de neurones convolutionnel reconnue par ses performances reconnues dans 
 les tâches de classification d'images. En effet, cette architecture repose 
@@ -120,7 +120,7 @@ fines. De plus, ayant été préentraîné sur ImageNet, EfficientNetB4 dispose
 déjà de représentations riches et généralisables, ce qui le rend 
 particulièrement adapté à la détection de symptômes visuels tels que les 
 taches, les décolorations et les lésions foliaires caractéristiques des 
-maladies des plantes. \cite{EfficientNetB4}
+maladies des plantes \cite{EfficientNetB4}. 
 \subsubsection{Fine-tuning du modèle}
 Afin d'adapter EfficientNetB4 à notre problème spécifique, nous procédons 
 à une étape de fine-tuning, qui consiste à réentraîner certaines couches 

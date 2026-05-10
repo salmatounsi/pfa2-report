@@ -22,6 +22,7 @@ Le \autoref{tableau 0} suivant présente les différents acteurs de notre systè
 \textbf{Rôles} & \textbf{Type} & \textbf{Fonctions} \\
 \hline
 Vendeur & Primaire &
+\vspace{-6pt}
 \begin{itemize}
     \item S'authentifier
     \item Gérer plantes
@@ -30,12 +31,14 @@ Vendeur & Primaire &
 \end{itemize} \\
 \hline
 Administrateur & Primaire &
+\vspace{-6pt}
 \begin{itemize}
     \item Gérer les utilisateurs
     \item Hérite toutes les fonctions du vendeur
 \end{itemize} \\
 \hline
-Client & Primaire &
+Client & Primaire & 
+\vspace{-6pt}
 \begin{itemize}
     \item S'authentifier
     \item Consulter les plantes disponibles à la vente
@@ -46,6 +49,7 @@ Client & Primaire &
 \end{itemize} \\
 \hline
 Module d'assistance au diagnostic et recommandation & Secondaire &
+\vspace{-6pt}
 \begin{itemize}
     \item Générer les diagnostics
     \item Générer les recommandations
@@ -55,6 +59,9 @@ Module d'assistance au diagnostic et recommandation & Secondaire &
 \caption{Les différents acteurs du système}
 \label{tableau 0}
 \end{table}
+
+
+
 
 \section{Besoins fonctionnels}
 
@@ -155,18 +162,21 @@ Le \autoref{tableau1} présente la description textuelle du cas d'utilisation «
 \textbf{Résumé} & Cas d'utilisation permettant à un vendeur ou à un administrateur de modifier le stock d'une plante. \\
 \hline
 \textbf{Préconditions} &
+\vspace{-12pt}
 \begin{itemize}
     \item Client authentifié.
     \item Plante existe déjà.
 \end{itemize} \\
 \hline
 \textbf{Postconditions} &
+\vspace{-12pt}
 \begin{itemize}
     \item Quantité de plantes est mise à jour dans la base de données.
     \item La plante est disponible à la vente.
 \end{itemize} \\
 \hline
 \textbf{Scénario nominal} &
+\vspace{-12pt}
 \begin{enumerate}
     \item Le vendeur/administrateur accède à l'interface de gestion des plantes.
     \item Le système affiche la liste des plantes.
@@ -179,6 +189,7 @@ Le \autoref{tableau1} présente la description textuelle du cas d'utilisation «
 \end{enumerate} \\
 \hline
 \textbf{Enchaînements d'erreurs} &
+\vspace{-12pt}
 \textbf{E1 : Quantité invalide}
 \begin{itemize}
     \item À l'étape 5 du scénario nominal, l'acteur saisit une valeur négative ou non numérique.
@@ -206,17 +217,20 @@ Le \autoref{tableau 2} présente la description textuelle du cas d'utilisation �
 \textbf{Résumé} & Cas d'utilisation permettant à un vendeur ou à un administrateur de modifier une plante. \\
 \hline
 \textbf{Préconditions} &
+\vspace{-12pt}
 \begin{itemize}
     \item Client authentifié.
     \item Plante existe déjà.
 \end{itemize} \\
 \hline
 \textbf{Postconditions} &
+\vspace{-12pt}
 \begin{itemize}
     \item Les données de la plante sont mises à jour.
 \end{itemize} \\
 \hline
 \textbf{Scénario nominal} &
+\vspace{-12pt}
 \begin{enumerate}
     \item L'acteur accède à l'interface de gestion des plantes.
     \item Le système affiche la liste des plantes.
@@ -248,11 +262,13 @@ Le \autoref{tableau 3} présente la description textuelle du cas d'utilisation �
 \textbf{Résumé} & Cas d'utilisation permettant à un vendeur ou à un administrateur d'ajouter une plante. \\
 \hline
 \textbf{Préconditions} &
+\vspace{-12pt}
 \begin{itemize}
     \item Client authentifié.
 \end{itemize} \\
 \hline
 \textbf{Scénario nominal} &
+\vspace{-12pt}
 \begin{enumerate}
     \item L'acteur accède à l'interface de gestion des plantes et clique sur « Ajouter une plante ».
     \item Le système affiche le formulaire d'ajout.
@@ -262,12 +278,14 @@ Le \autoref{tableau 3} présente la description textuelle du cas d'utilisation �
 \end{enumerate} \\
 \hline
 \textbf{Enchaînements alternatifs} &
+\vspace{-12pt}
 \textbf{A1 : L'acteur laisse un champ vide}
 \begin{itemize}
     \item À l'étape 4, le système affiche une alerte et l'acteur doit reprendre à l'étape 3.
 \end{itemize} \\
 \hline
 \textbf{Scénario d'erreur} &
+\vspace{-12pt}
 \textbf{E1 : Plante déjà existante}
 \begin{itemize}
     \item À l'étape 4, le système affiche une alerte et l'acteur doit reprendre à l'étape 3.
@@ -294,6 +312,7 @@ Le \autoref{tableau 4} présente la description textuelle du cas d'utilisation �
 \textbf{Résumé} & Cas d'utilisation permettant à un vendeur ou à un administrateur de supprimer une plante. \\
 \hline
 \textbf{Préconditions} &
+\vspace{-12pt}
 \begin{itemize}
     \item Client authentifié.
     \item Plante existe déjà.
@@ -302,6 +321,7 @@ Le \autoref{tableau 4} présente la description textuelle du cas d'utilisation �
 \textbf{Postconditions} & La plante n'est plus visible sur le site. \\
 \hline
 \textbf{Scénario nominal} &
+\vspace{-12pt}
 \begin{enumerate}
     \item L'acteur accède à l'interface de gestion des plantes.
     \item Le système affiche la liste des plantes.
@@ -341,6 +361,7 @@ le \autoref{tableau 5} représente la description textuelle de cas d'utilisation
 \textbf{Résumé} & Cas d'utilisation permettant au vendeur d'accéder à la liste des plantes. \\
 \hline
 \textbf{Préconditions} &
+\vspace{-12pt}
 \begin{itemize}
     \item Vendeur authentifié.
     \item Plantes enregistrées dans la base de données.
@@ -349,12 +370,14 @@ le \autoref{tableau 5} représente la description textuelle de cas d'utilisation
 \textbf{Postconditions} & Liste des plantes affichée. \\
 \hline
 \textbf{Scénario nominal} &
+\vspace{-12pt}
 \begin{enumerate}
     \item Le vendeur accède à la section « Plantes ».
     \item Le système affiche la liste des plantes disponibles.
 \end{enumerate} \\
 \hline
 \textbf{Scénario alternatif} &
+\vspace{-12pt}
 \textbf{A1 : Filtrer les plantes}
 \begin{itemize}
     \item À l'étape 2, le vendeur choisit de filtrer les plantes selon un des critères suivants (plante d'intérieur, d'extérieur, prix, besoin en lumière, eau, température...).
@@ -397,6 +420,7 @@ le \autoref{tableau 6} présente la description textuelle du cas d'utilisation �
 \textbf{Résumé} & Cas d'utilisation permettant au vendeur ainsi qu'à l'administrateur d'accéder à la liste des commandes. \\
 \hline
 \textbf{Préconditions} &
+\vspace{-12pt}
 \begin{itemize}
     \item Acteur authentifié.
     \item Commandes enregistrées.
@@ -405,12 +429,14 @@ le \autoref{tableau 6} présente la description textuelle du cas d'utilisation �
 \textbf{Postconditions} & Liste des commandes affichée. \\
 \hline
 \textbf{Scénario nominal} &
+\vspace{-12pt}
 \begin{enumerate}
     \item L'acteur accède à la section « Commandes ».
     \item Le système affiche la liste des commandes.
 \end{enumerate} \\
 \hline
 \textbf{Scénario alternatif} &
+\vspace{-12pt}
 \textbf{A1 : Recherche d'un compte utilisateur}
 \begin{itemize}
     \item À l'étape 2, l'administrateur choisit de faire une recherche, il saisit un mot-clé (nom, email...).
@@ -444,6 +470,7 @@ Le \autoref{tableau 7} présente la description textuelle du cas d'utilisation �
 \textbf{Résumé} & Cas d'utilisation permettant au vendeur ainsi qu'à l'administrateur d'accepter une commande. \\
 \hline
 \textbf{Préconditions} &
+\vspace{-12pt}
 \begin{itemize}
     \item Acteur authentifié.
     \item Commande avec statut « Passée ».
@@ -452,6 +479,7 @@ Le \autoref{tableau 7} présente la description textuelle du cas d'utilisation �
 \textbf{Postconditions} & Statut de la commande mis à « Acceptée ». \\
 \hline
 \textbf{Scénario nominal} &
+\vspace{-12pt}
 \begin{enumerate}
     \item L'acteur sélectionne une commande En attente.
     \item Le système affiche les détails de la commande.
@@ -461,6 +489,7 @@ Le \autoref{tableau 7} présente la description textuelle du cas d'utilisation �
 \end{enumerate} \\
 \hline
 \textbf{Scénario d'erreur} &
+\vspace{-12pt}
 \textbf{E1 : Validation abandonnée}
 \begin{itemize}
     \item À l'étape 3, l'acteur décide d'annuler l'opération.
@@ -494,6 +523,7 @@ Le \autoref{tableau 8} présente la description textuelle du cas d'utilisation �
 \textbf{Résumé} & Cas d'utilisation permettant au vendeur ainsi qu'à l'administrateur de refuser une commande. \\
 \hline
 \textbf{Préconditions} &
+\vspace{-12pt}
 \begin{itemize}
     \item Acteur authentifié.
     \item Commande avec statut « En attente ».
@@ -502,6 +532,7 @@ Le \autoref{tableau 8} présente la description textuelle du cas d'utilisation �
 \textbf{Postconditions} & Statut de la commande mis à « Refusée ». \\
 \hline
 \textbf{Scénario nominal} &
+\vspace{-12pt}
 \begin{enumerate}
     \item L'acteur sélectionne une commande En attente.
     \item Le système affiche les détails de la commande.
@@ -510,6 +541,7 @@ Le \autoref{tableau 8} présente la description textuelle du cas d'utilisation �
 \end{enumerate} \\
 \hline
 \textbf{Scénario d'erreur} &
+\vspace{-12pt}
 \textbf{E1 : Refus abandonné}
 \begin{itemize}
     \item À l'étape 3, l'acteur décide d'annuler l'opération.
@@ -549,6 +581,7 @@ Le \autoref{tableau 9} présente la description textuelle du cas d'utilisation �
 \textbf{Résumé} & Cas d'utilisation permettant à l'administrateur d'activer un compte utilisateur afin de lui permettre d'accéder aux fonctionnalités de la plateforme. \\
 \hline
 \textbf{Préconditions} &
+\vspace{-12pt}
 \begin{itemize}
     \item Administrateur authentifié.
     \item Compte avec statut « En attente ».
@@ -557,6 +590,7 @@ Le \autoref{tableau 9} présente la description textuelle du cas d'utilisation �
 \textbf{Postconditions} & Compte utilisateur activé. \\
 \hline
 \textbf{Scénario nominal} &
+\vspace{-12pt}
 \begin{enumerate}
     \item L'administrateur sélectionne un compte dont le statut est « En attente ».
     \item Le système affiche les détails du compte.
@@ -585,6 +619,7 @@ Le \autoref{tableau 10} présente la description textuelle du cas d'utilisation 
 \textbf{Résumé} & Cas d'utilisation permettant à l'administrateur de suspendre temporairement un compte utilisateur. \\
 \hline
 \textbf{Préconditions} &
+\vspace{-12pt}
 \begin{itemize}
     \item Administrateur authentifié.
     \item Compte actif.
@@ -593,6 +628,7 @@ Le \autoref{tableau 10} présente la description textuelle du cas d'utilisation 
 \textbf{Postconditions} & Compte utilisateur désactivé. \\
 \hline
 \textbf{Scénario nominal} &
+\vspace{-12pt}
 \begin{enumerate}
     \item L'administrateur sélectionne un compte actif.
     \item Le système affiche les détails du compte.
@@ -630,6 +666,7 @@ Le tableau \autoref{tableau 11} représente la description textuelle du cas d'ut
 \textbf{Résumé} & Cas d'utilisation permettant à l'administrateur d'accéder à la liste des comptes utilisateurs. \\
 \hline
 \textbf{Préconditions} &
+\vspace{-12pt}
 \begin{itemize}
     \item Administrateur authentifié.
     \item Comptes utilisateurs existants.
@@ -638,12 +675,14 @@ Le tableau \autoref{tableau 11} représente la description textuelle du cas d'ut
 \textbf{Postconditions} & Liste des comptes utilisateurs affichée. \\
 \hline
 \textbf{Scénario nominal} &
+\vspace{-12pt}
 \begin{enumerate}
     \item L'administrateur accède à la section « Comptes utilisateurs ».
     \item Le système affiche la liste des comptes avec leurs informations principales et leur statut.
 \end{enumerate} \\
 \hline
 \textbf{Scénario alternatif} &
+\vspace{-12pt}
 \textbf{A1 : Recherche d'un compte utilisateur}
 \begin{itemize}
     \item À l'étape 2, l'administrateur saisit un mot-clé (nom, email...).
@@ -685,6 +724,7 @@ Le \autoref{tableau 12} présente la description textuelle du cas d'utilisation 
 \textbf{Résumé} & Cas d'utilisation permettant au client de consulter son panier \\
 \hline
 \textbf{Préconditions} &
+\vspace{-12pt}
 \begin{itemize}
     \item Client authentifié.
     \item Panier existe
@@ -693,12 +733,14 @@ Le \autoref{tableau 12} présente la description textuelle du cas d'utilisation 
 \textbf{Postconditions} & Affichage des plantes existantes dans le panier. \\
 \hline
 \textbf{Scénario nominal} &
+\vspace{-12pt}
 \begin{enumerate}
     \item Le client clique sur le panier.
     \item Le système affiche la liste des plantes existante dans le panier.
 \end{enumerate} \\
 \hline
 \textbf{Scénario alternatif} &
+\vspace{-12pt}
 \textbf{A1 : Valider panier}
 \begin{itemize}
     \item À l'étape 2, le client valide le panier.
@@ -740,6 +782,7 @@ Le \autoref{tableau 13} représente la description textuelle du cas d'utilisatio
 \textbf{Résumé} & Cas d'utilisation permettant au client d'accéder à la liste des plantes disponibles à la vente. \\
 \hline
 \textbf{Préconditions} &
+\vspace{-12pt}
 \begin{itemize}
     \item client authentifié.
     \item Plantes enregistrées dans la base de données et disponibles à la vente.
@@ -748,12 +791,14 @@ Le \autoref{tableau 13} représente la description textuelle du cas d'utilisatio
 \textbf{Postconditions} & Liste des plantes disponibles à la vente affichée. \\
 \hline
 \textbf{Scénario nominal} &
+\vspace{-12pt}
 \begin{enumerate}
     \item Le client accède à la section « Plantes ».
     \item Le système affiche la liste des plantes disponibles à la vente.
 \end{enumerate} \\
 \hline
 \textbf{Scénario alternatif} &
+\vspace{-12pt}
 \textbf{A1 : Filtrer les plantes}
 \begin{itemize}
     \item À l'étape 2, le client choisit de filtrer les plantes selon un des critères suivants (plante d'intérieur, d'extérieur, prix, besoin en lumière, eau, température...).
@@ -786,6 +831,7 @@ Le \autoref{tableau 14} présente la description textuelle du cas d'utilisation 
 \textbf{Résumé} & Cas d'utilisation permettant au client d'ajouter une plante sélectionnée à son panier afin de préparer une commande. \\
 \hline
 \textbf{Préconditions} &
+\vspace{-12pt}
 \begin{itemize}
     \item Client authentifié.
     \item Plante disponible à la vente.
@@ -794,6 +840,7 @@ Le \autoref{tableau 14} présente la description textuelle du cas d'utilisation 
 \textbf{Postconditions} & Plante ajoutée au panier du client. \\
 \hline
 \textbf{Scénario nominal} &
+\vspace{-12pt}
 \begin{enumerate}
     \item Le client consulte la liste des plantes disponibles.
     \item Il sélectionne une plante.
@@ -823,6 +870,7 @@ Le \autoref{tableau 15} présente la description textuelle du cas d'utilisation 
 \textbf{Résumé} & Cas d'utilisation permettant au client de suivre l'état de sa commande. \\
 \hline
 \textbf{Préconditions} &
+\vspace{-12pt}
 \begin{itemize}
     \item Client authentifié.
     \item Commande créée.
@@ -831,6 +879,7 @@ Le \autoref{tableau 15} présente la description textuelle du cas d'utilisation 
 \textbf{Postconditions} & L'état de la commande est affiché. \\
 \hline
 \textbf{Scénario nominal} &
+\vspace{-12pt}
 \begin{enumerate}
     \item Le client clique sur la commande.
     \item Le système affiche l'état de la commande.
@@ -857,6 +906,7 @@ Le \autoref{tableau 16} présente la description textuelle du cas d'utilisation 
 \textbf{Résumé} & Cas d'utilisation permettant au client de diagnostiquer sa plante. \\
 \hline
 \textbf{Préconditions} &
+\vspace{-12pt}
 \begin{itemize}
     \item Client authentifié.
 \end{itemize} \\
@@ -864,6 +914,7 @@ Le \autoref{tableau 16} présente la description textuelle du cas d'utilisation 
 \textbf{Postconditions} & Le diagnostic de la plante est affiché. \\
 \hline
 \textbf{Scénario nominal} &
+\vspace{-12pt}
 \begin{enumerate}
     \item Le client clique sur le menu « Diagnostic ».
     \item Le système affiche un champ de chargement d'une photo.
@@ -873,6 +924,7 @@ Le \autoref{tableau 16} présente la description textuelle du cas d'utilisation 
 \end{enumerate} \\
 \hline
 \textbf{Scénario d'erreur} &
+\vspace{-12pt}
 \textbf{E1 : Photo non exploitable}
 \begin{itemize}
     \item À l'étape 5, le système affiche un message d'erreur indiquant que la photo est inexploitable.
@@ -900,6 +952,7 @@ Le \autoref{tableau 17} présente la description textuelle du cas d'utilisation 
 \textbf{Résumé} & Cas d'utilisation permettant au client de consulter les recommandations. \\
 \hline
 \textbf{Préconditions} &
+\vspace{-12pt}
 \begin{itemize}
     \item Client authentifié.
 \end{itemize} \\
@@ -907,6 +960,7 @@ Le \autoref{tableau 17} présente la description textuelle du cas d'utilisation 
 \textbf{Postconditions} & Les recommandations sont affichés. \\
 \hline
 \textbf{Scénario nominal} &
+\vspace{-12pt}
 \begin{enumerate}
     \item Le client clique sur le menu « Historique recommandations ».
     \item Le système affiche les diagnostics effectués avec les recommandations prosposées.
