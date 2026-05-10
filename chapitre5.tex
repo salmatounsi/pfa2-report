@@ -1,6 +1,6 @@
 \chapter{Réalisation et mise en œuvre}
-
 \section*{Introduction}
+\addcontentsline{toc}{section}{Introduction}
 Dans ce chapitre, nous présentons les environnements matériel et logiciel utilisés,
 l’architecture de la solution et nous allons donner un aperçu sur le travail réalisé ainsi
 que le résultat de l'integration du module de diagnostic intelligent et recommandation.
@@ -104,47 +104,237 @@ suit un modèle \textbf{quatre-tiers}, organisé comme suit :
         \label{fig:arch}
         \end{figure}
 
-    \subsection{Aperçu sur le travail réalisé}
-Dans cette partie, nous décrivons les différentes interfaces de notre plate-forme, PhytoCare
+   \subsection{Aperçu sur le travail réalisé}
 
-        \subsubsection{La page de connexion}
+Dans cette partie, nous présentons les différentes interfaces réalisées de notre application PhytoCare.
 
-    La \autoref{fig:con} est la page de connexion.
-        \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.3\textheight]{images/login.png}
-        \caption{La page de connexion.}
-        \label{fig:con}
-        \end{figure}
+\subsubsection{La page de connexion}
 
-        \subsubsection{La page d'inscription}
-        ...
-        \subsubsection{La page d'accueil}
+La \autoref{fig:con} illustre la page de connexion de notre application. Cette interface permet aux utilisateurs de s’authentifier afin d’accéder aux fonctionnalités correspondant à leurs rôles dans le système.
 
-        La \autoref{fig:acc1} et la \autoref{fig:acc2} sont la page d'accueil.
-       
-        \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.3\textheight]{images/pagedacc(2).png}
-        \caption{La page d'accueil (1).}
-        \label{fig:acc1}
-        \end{figure}        
-        
-        \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.3\textheight]{images/pagedacc.png}
-        \caption{La page d'accueil (2).}
-        \label{fig:acc2}
-        \end{figure}  
+Depuis cette page, l’utilisateur peut saisir ses informations d’authentification afin d’accéder à son espace personnel. Après validation, le système redirige automatiquement l’utilisateur vers l’interface adaptée à son rôle.
 
-        \subsubsection{La page panier}
-        ...
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.28\textheight]{images/login.png}
+\caption{La page de connexion.}
+\label{fig:con}
+\end{figure}
 
-        \subsubsection{La page dianostic}
-        ...
+\FloatBarrier
+
+\subsubsection{La page d'inscription}
+
+La \autoref{fig:signup} illustre la page d’inscription de notre application. Cette interface permet aux nouveaux utilisateurs de créer un compte afin d’accéder aux différentes fonctionnalités proposées par l’application.
+
+À partir de cette page, l’utilisateur peut saisir les informations nécessaires à la création de son compte, telles que son nom, son adresse e-mail ainsi que son mot de passe. Après validation du formulaire, les informations sont enregistrées dans la base de données afin de permettre l’accès futur à l’application.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.28\textheight]{images/signup.png}
+\caption{La page d'inscription.}
+\label{fig:signup}
+\end{figure}
+
+\FloatBarrier
+\subsubsection{La page d'accueil}
+
+La \autoref{fig:acc1} et la \autoref{fig:acc2} illustrent la page d’accueil de notre application. Cette interface s’affiche après l’authentification du client dans l’application.
+
+À partir de cette page, le client peut consulter les plantes disponibles et accéder aux différentes fonctionnalités proposées par l’application.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.28\textheight]{images/pagedacc(2).png}
+\caption{La page d'accueil (1).}
+\label{fig:acc1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.28\textheight]{images/pagedacc.png}
+\caption{La page d'accueil (2).}
+\label{fig:acc2}
+\end{figure}
+
+\FloatBarrier
+
+
+\subsubsection{La page panier}
+
+La \autoref{fig:panier} illustre la page panier de notre application. Cette interface permet au client de consulter l’ensemble des plantes qu’il a ajoutées avant la validation de sa commande.
+
+Depuis cette page, le client peut visualiser les plantes sélectionnées ainsi que gérer les quantités avant la confirmation de la commande.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.28\textheight]{images/panier.png}
+\caption{La page panier.}
+\label{fig:panier}
+\end{figure}
+
+\FloatBarrier
+
+
+\subsubsection{La page diagnostic}
+
+La \autoref{fig:diagpage1} et la \autoref{fig:diagpage2} illustrent la page de diagnostic intelligent de notre application. Cette interface permet à l’utilisateur de charger une image de sa plante afin d’effectuer un diagnostic de son état de santé.
+
+Depuis cette page, l’utilisateur peut importer une image de la plante concernée, puis lancer le processus de diagnostic. Le système analyse ensuite l’image à l’aide du modèle d’apprentissage automatique intégré et retourne le résultat du diagnostic accompagné de recommandations adaptées selon la maladie détectée.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.28\textheight]{images/diag1.png}
+\caption{La page diagnostic (1).}
+\label{fig:diagpage1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.28\textheight]{images/diag2.png}
+\caption{La page diagnostic (2).}
+\label{fig:diagpage2}
+\end{figure}
+
+
+\subsubsection{Les interfaces vendeur}
+
+Les \autoref{fig:vendeurDash1} et \autoref{fig:vendeurDash2} illustrent les principales interfaces vendeur. Elles permettent la gestion des plantes ainsi que le suivi des commandes des clients.
+
+Depuis le tableau de bord, le vendeur peut consulter les statistiques principales, accéder aux commandes récentes et ajouter de nouvelles plantes.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.28\textheight]{images/sidebar-vendeur.png}
+\caption{Menu principal vendeur.}
+\label{fig:vendeurDash1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.28\textheight]{images/dashboard-vendeur.png}
+\caption{Tableau de bord vendeur.}
+\label{fig:vendeurDash2}
+\end{figure}
+
+\FloatBarrier
+
+
+Les \autoref{fig:plantes1} et \autoref{fig:plantes2} illustrent les interfaces de gestion des plantes. Ces interfaces permettent au vendeur de consulter le catalogue, rechercher des plantes et effectuer des opérations d’ajout, de modification et de suppression.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.28\textheight]{images/plantes-all.png}
+\caption{Gestion des plantes.}
+\label{fig:plantes1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.28\textheight]{images/plantes-active.png}
+\caption{Gestion des plantes actives.}
+\label{fig:plantes2}
+\end{figure}
+
+\FloatBarrier
+
+
+Les \autoref{fig:cmd1}, \autoref{fig:cmd2} et \autoref{fig:cmd3} illustrent les interfaces de gestion des commandes. Elles permettent au vendeur de consulter les commandes des clients, visualiser leurs détails ainsi qu’accepter ou refuser une commande selon la disponibilité des plantes.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.28\textheight]{images/commandes.png}
+\caption{Liste des commandes.}
+\label{fig:cmd1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.28\textheight]{images/commande-attente.png}
+\caption{Validation d’une commande en attente.}
+\label{fig:cmd2}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.28\textheight]{images/commande-acceptee.png}
+\caption{Commande acceptée.}
+\label{fig:cmd3}
+\end{figure}
+
+\FloatBarrier
+
+
+La \autoref{fig:profilVendeur} illustre la page profil vendeur. Cette interface permet au vendeur de consulter et modifier ses informations personnelles.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.28\textheight]{images/profil-vendeur.png}
+\caption{Profil vendeur.}
+\label{fig:profilVendeur}
+\end{figure}
+
+\FloatBarrier
+
+
+\subsubsection{Les fonctionnalités supplémentaires de l’administrateur}
+
+L’administrateur hérite de l’ensemble des fonctionnalités du vendeur.
+
+En plus de celles-ci, il dispose d’interfaces dédiées à la gestion des utilisateurs. Ces interfaces permettent de consulter les comptes utilisateurs, effectuer des recherches, filtrer les utilisateurs selon leurs rôles et gérer l’activation ou la suspension des comptes.
+
+La \autoref{fig:adminDash} illustre le tableau de bord administrateur.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.28\textheight]{images/dashboardadmin1.png}
+\caption{Tableau de bord administrateur.}
+\label{fig:adminDash}
+\end{figure}
+
+\FloatBarrier
+
+
+Les \autoref{fig:users1}, \autoref{fig:users2} et \autoref{fig:users3} illustrent les interfaces de gestion des utilisateurs.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.28\textheight]{images/users-all.png}
+\caption{Gestion des utilisateurs.}
+\label{fig:users1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.28\textheight]{images/users-clients.png}
+\caption{Gestion des clients.}
+\label{fig:users2}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.28\textheight]{images/users-vendeurs.png}
+\caption{Gestion des vendeurs.}
+\label{fig:users3}
+\end{figure}
+
+\FloatBarrier
+
+
+La \autoref{fig:profilAdmin} illustre la page profil administrateur.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.28\textheight]{images/profil-admin.png}
+\caption{Profil administrateur.}
+\label{fig:profilAdmin}
+\end{figure}
+
+\FloatBarrier
 
 
 \section*{Conclusion}
+\addcontentsline{toc}{section}{Conclusion}
 Ce chapitre final a été consacré à la présentation des résultats de notre travail 
 réalisé sur notre application PhytoCare, en décrivant les environnements matériel 
 et logiciel utilisés, l'architecture, ainsi que quelques interfaces de la plateforme.

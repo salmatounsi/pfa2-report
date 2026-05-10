@@ -1,6 +1,7 @@
 \chapter{Conception}
 
 \section*{Introduction}
+\addcontentsline{toc}{section}{Introduction}
 
 Après avoir réalisé l'analyse et la spécification des besoins de la plateforme de pépinière, nous consacrons ce chapitre à la phase de conception du système.
 Dans un premier temps, nous présenterons la conception générale à travers la décomposition du système en modules fonctionnels. Ensuite, nous aborderons la conception détaillée en décrivant les différentes classes ainsi que leurs interactions. Enfin, nous illustrerons le fonctionnement du système intelligent à travers des scénarios d'exécution.
@@ -433,23 +434,15 @@ Après avoir détaillé les méthodes des différentes classes dans l'étude dyn
 
 Dans ce scénario, l'utilisateur (client) souhaite obtenir un diagnostic concernant l'état de sa plante à partir d'une image fournie via l'application, ainsi que des recommandations adaptées en fonction du diagnostic établi.
 
-Dans le scénario nominal, le client charge une image de la plante à analyser. Le système transmet ensuite cette image au module de diagnostic intelligent.
+Dans le scénario nominal, le client charge une image de la plante à analyser et la transmet au backend. Celui-ci la achemine vers le module de diagnostic intelligent, qui analyse l'image et génère un diagnostic décrivant le problème détecté. Ce diagnostic est ensuite transmis directement au module de recommandation, qui exploite l'API OpenAI afin de produire des recommandations personnalisées et adaptées, telles que : traitement recommandé, modification des conditions d'arrosage, exposition à la lumière ou utilisation d'un produit spécifique. Une fois le diagnostic et les recommandations générés, ils sont retournés ensemble au backend, qui les enregistre dans la base de données et les transmet au client pour affichage, l'aidant ainsi à prendre les actions nécessaires pour améliorer l'état de sa plante.
 
-Le modèle d'intelligence artificielle intégré à la plateforme (modèle de diagnostic) analyse l'image et génère un diagnostic décrivant le problème détecté (maladie, carence, stress hydrique, etc.).
-
-Dans le cas normal, le système enregistre le diagnostic retourné par le modèle puis le transmet au modèle de recommandation, qui analyse les résultats obtenus et propose des recommandations adaptées, telles que : traitement recommandé, modification des conditions d'arrosage, exposition à la lumière ou utilisation d'un produit spécifique.
-
-Ces recommandations sont ensuite retournées au système, qui les enregistre et les affiche à l'utilisateur afin de l'aider à prendre les actions nécessaires pour améliorer l'état de sa plante.
-
-Dans le scénario d'erreur, si l'image fournie est invalide ou corrompue, le système affiche un message indiquant que le diagnostic n'a pas pu être effectué.
-
-Le résultat affiché par la plateforme sera alors : « Diagnostic indisponible ».
+Dans le scénario d'erreur, si l'image fournie est invalide ou corrompue, le module de diagnostic retourne une réponse nulle au backend, qui affiche alors un message indiquant que le diagnostic n'a pas pu être effectué. Le résultat affiché par la plateforme sera alors : « Diagnostic indisponible ».
 
 La \autoref{seq} représente le diagramme de sequence du cas d'utilisation : Effectuer diagnostic.
 
 \begin{figure}[h]       % "h" = ici, essaye de garder l'image à cet endroit
     \centering          % centre l'image
-    \includegraphics[width=1.1\textwidth]{./image/diagSequenceAI.png}  
+    \includegraphics[width=1.1\textwidth]{./images/diagsequencefinal.png}  
     \caption{Diagramme de sequence effectuer diagnostic }
     \label{seq}   % label pour faire référence dans le texte
 \end{figure}
@@ -458,6 +451,7 @@ La \autoref{seq} représente le diagramme de sequence du cas d'utilisation : Eff
 
 
 \section*{Conclusion}
+\addcontentsline{toc}{section}{Conclusion}
 
 Dans ce chapitre, nous avons présenté la conception générale et détaillée de la plateforme de pépinière en ligne.
 La décomposition en modules ainsi que l'étude des classes ont permis de mieux comprendre l'architecture du système et les interactions entre ses composants.

@@ -1,13 +1,15 @@
 \documentclass[12pt,a4paper,oneside]{report}
 
+\usepackage{pdfpages}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
-
+\usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{float}
-\usepackage[numbers]{natbib}\usepackage{float}
+\usepackage[numbers]{natbib}
 \usepackage{array}
 \usepackage{longtable}
 \usepackage{caption}
@@ -15,26 +17,30 @@
 \usepackage{setspace}
 \usepackage{titlesec}
 \usepackage{enumitem}
-\usepackage{hyperref}
-\usepackage{placeins} 
-\usepackage{amsmath}
-\usepackage{amssymb}
+\usepackage{placeins}
+
 \geometry{top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm}
 
 % Texte
 \fontsize{12}{14}\selectfont
-\setstretch{1.2}
+\onehalfspacing
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0.4em}
 
-% Chapitre : "Chapitre 2. Titre" sur la même ligne
+% Réduction des espaces blancs
+\raggedbottom
+\setlength{\textfloatsep}{10pt}
+\setlength{\floatsep}{8pt}
+\setlength{\intextsep}{8pt}
+
+% Chapitre : "Chapitre 2. Titre"
 \titleformat{\chapter}[hang]
   {\bfseries\fontsize{14}{16}\selectfont}
   {Chapitre \thechapter.}
   {0.5em}
   {}
 
-% Sections : 1. Titre ; 2. Titre ...
+% Sections
 \renewcommand{\thesection}{\arabic{section}}
 \titleformat{\section}
   {\bfseries\fontsize{14}{16}\selectfont}
@@ -42,7 +48,7 @@
   {0.5em}
   {}
 
-% Sous-sections : 3.1. ...
+% Sous-sections
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
 \titleformat{\subsection}
   {\bfseries\fontsize{12}{14}\selectfont}
@@ -50,7 +56,7 @@
   {0.5em}
   {}
 
-% Sous-sous-sections : 3.1.1. ...
+% Sous-sous-sections
 \renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
 \titleformat{\subsubsection}
   {\bfseries\fontsize{12}{14}\selectfont}
@@ -59,12 +65,12 @@
   {}
 
 % Espacement des titres
-\titlespacing*{\chapter}{0pt}{0pt}{18pt}
-\titlespacing*{\section}{0pt}{12pt}{8pt}
-\titlespacing*{\subsection}{0pt}{10pt}{6pt}
-\titlespacing*{\subsubsection}{0pt}{8pt}{4pt}
+\titlespacing*{\chapter}{0pt}{0pt}{12pt}
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+\titlespacing*{\subsection}{0pt}{6pt}{3pt}
+\titlespacing*{\subsubsection}{0pt}{4pt}{2pt}
 
-% Légendes en dessous
+% Légendes
 \captionsetup[figure]{position=bottom,labelfont=bf,font=small,labelsep=colon}
 \captionsetup[table]{position=bottom,labelfont=bf,font=small,labelsep=colon}
 
@@ -74,35 +80,149 @@
 
 \begin{document}
 
-\begin{titlepage}
-    \centering
-    \vspace*{3cm}
-    {\fontsize{18}{22}\selectfont \textbf{PFA2}\par}
-    \vspace{1.5cm}
-    {\fontsize{14}{16}\selectfont Rapport de Projet de Fin d’Année\par}
-    \vspace{2cm}
-    {\fontsize{14}{16}\selectfont Tounsi Selma\par}
-  
-    {\fontsize{14}{16}\selectfont Ben Maatoug Ranim\par}
-    
-    {\fontsize{14}{16}\selectfont Bsila Nour\par}
-    \vfill
-    {\fontsize{12}{14}\selectfont Mars 2026\par}
-\end{titlepage}
+% ================= PAGE DE GARDE =================
+
+\includepdf[pages=-]{pageDeGarde.pdf}
+
+% ================= DEDICACES =================
+
+\clearpage
+\thispagestyle{empty}
+
+\vspace*{0.5cm}
+
+\begin{center}
+{\bfseries\fontsize{16}{18}\selectfont Dédicaces}
+\end{center}
+
+\vspace{0.5cm}
+
+\begin{center}
+\itshape
+
+Nous dédions ce travail...
+
+\vspace{0.8cm}
+
+À nos familles,\\
+Ces piliers silencieux qui ont porté nos rêves bien avant que nous en soyons capables.
+
+\vspace{0.6cm}
+
+À nos amis,\\
+Compagnons de route et de galère, qui ont su trouver les mots justes dans les moments difficiles et célébrer avec nous chaque petite victoire.
+
+\vspace{0.6cm}
+
+À notre encadrante,\\
+Pour sa disponibilité, sa bienveillance et la richesse de ses conseils. Vous avez su guider nos réflexions avec patience et rigueur, nous pousser à dépasser nos limites tout en nous faisant confiance. Ce travail porte l'empreinte de votre engagement et de votre passion pour l'enseignement.
+
+\vspace{0.6cm}
+
+Pour sa disponibilité, sa bienveillance et la richesse de ses conseils. Vous avez su guider nos réflexions avec patience et rigueur, nous pousser à dépasser nos limites tout en nous faisant confiance. Ce travail porte l'empreinte de votre engagement et de votre passion pour l'enseignement.
+
+\vspace{0.6cm}
+
+Au jury,\\
+Qui nous fait l'honneur d'évaluer ce travail. Nous vous exprimons notre profond respect et notre sincère gratitude pour le temps et l'attention que vous lui consacrez.
+
+\vspace{0.6cm}
+
+À nos professeurs,\\
+Qui, tout au long de notre formation, ont semé en nous les graines du savoir, de la curiosité et de la persévérance.
+
+\vspace{0.6cm}
+
+Et à nous-mêmes,\\
+Pour avoir tenu, recommencé, douté et continué malgré tout.
+
+\vspace{0.6cm}
+
+Que ce travail soit à la hauteur de la confiance que vous nous avez accordée.
+
+\end{center}
+
+% ================= REMERCIEMENTS =================
+
+\clearpage
+\thispagestyle{empty}
+
+\vspace*{1cm}
+
+\begin{center}
+{\bfseries\fontsize{16}{18}\selectfont Remerciements}
+\end{center}
+
+\vspace{1cm}
+
+\begin{center}
+
+Nous tenons à exprimer notre profonde gratitude à toutes les personnes qui ont contribué à la réalisation de ce travail.
+
+\vspace{0.6cm}
+
+À notre encadrante, Madame Ines BAYOUDH SAADI,\\
+pour son encadrement bienveillant, son suivi rigoureux et sa disponibilité tout au long de ce projet. Ses précieux conseils, sa rigueur scientifique et ses encouragements dans les moments les plus difficiles ont été déterminants dans l'accomplissement de ce travail.
+
+\vspace{0.6cm}
+
+À Monsieur Wahid Nasri,\\
+nous exprimons notre sincère reconnaissance pour l'intérêt qu'il a porté à notre travail et pour avoir accepté de l'examiner. Sa présence au jury est pour nous un honneur.
+
+\vspace{0.6cm}
+
+À toute l'équipe pédagogique de l'École Nationale Supérieure d'Ingénieurs de Tunis,\\
+pour la qualité de la formation dispensée et leur implication tout au long de notre cursus.
+
+\vspace{0.6cm}
+
+Enfin, à nos familles, amis et collègues,\\
+qui n'ont jamais cessé de nous soutenir et de nous encourager. Votre présence et votre confiance ont été notre plus grande force.
+
+\vspace{0.6cm}
+
+À toutes et à tous, merci.
+
+\end{center}
+
+\clearpage
+
+% ================= TABLES =================
+
 \clearpage
 \pagenumbering{Roman}
 \setcounter{page}{1}
+
 \tableofcontents
-\onehalfspacing
+
+\clearpage
+\listoffigures
+
 \clearpage
 \pagenumbering{arabic}
 \setcounter{page}{1}
+
+% ================= CHAPITRES =================
+
 \input{introduction}
 \input{chapitre1}
 \input{chapitre2}
 \input{chapitre3}
 \input{chapitre4}
 \input{chapitre5}
+
+% ================= CONCLUSION =================
+
+\input{conclusion}
+
+% ================= BIBLIOGRAPHIE =================
+
 \bibliographystyle{IEEEtranN}
 \bibliography{biblio}
+
+% ================= ABSTRACT =================
+
+\clearpage
+\includepdf[pages=-]{abstract.pdf}
+
 \end{document}
